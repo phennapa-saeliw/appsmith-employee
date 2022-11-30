@@ -308,6 +308,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "IconButton1Copy2",
+                              "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Icon Button",
                               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -322,7 +323,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 4.925140380859375,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 9,
                               "dynamicBindingPathList": [
                                 {
@@ -477,6 +482,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "IconButton1Copy1",
+                              "onClick": "{{navigateTo('Update', {}, 'SAME_WINDOW')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Icon Button",
                               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -491,7 +497,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 4.925140380859375,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 7,
                               "dynamicBindingPathList": [
                                 {
@@ -646,6 +656,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "IconButton1Copy",
+                              "onClick": "{{navigateTo('Insert', {}, 'SAME_WINDOW')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Icon Button",
                               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -660,7 +671,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 4.925140380859375,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 7,
                               "dynamicBindingPathList": [
                                 {
@@ -766,6 +781,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "IconButton1",
+                              "onClick": "{{navigateTo('Select', {}, 'SAME_WINDOW')}}",
                               "buttonColor": "#facc15",
                               "displayName": "Icon Button",
                               "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -780,7 +796,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 4.925140380859375,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 7,
                               "dynamicBindingPathList": [
                                 {

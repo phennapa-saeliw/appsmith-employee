@@ -91,7 +91,17 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 17.642578125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "menuItems.menuItem1.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem2.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem3.onClick"
+                        }
+                      ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -112,7 +122,8 @@
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": false,
-                          "index": 0
+                          "index": 0,
+                          "onClick": "{{navigateTo('Select', {}, 'SAME_WINDOW')}}"
                         },
                         "menuItem2": {
                           "label": "Update",
@@ -120,15 +131,17 @@
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": false,
-                          "index": 1
+                          "index": 1,
+                          "onClick": "{{navigateTo('Update', {}, 'SAME_WINDOW')}}"
                         },
                         "menuItem3": {
-                          "label": "Logout",
+                          "label": "Home Page",
                           "id": "menuItem3",
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": false,
-                          "index": 2
+                          "index": 2,
+                          "onClick": "{{navigateTo('Home Page', {}, 'SAME_WINDOW')}}"
                         }
                       },
                       "isVisible": true,
