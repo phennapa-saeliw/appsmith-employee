@@ -1,8 +1,24 @@
 {
   "pages": [
     {
-      "id": "Page1",
+      "id": "Login",
       "isDefault": true
+    },
+    {
+      "id": "Home Page",
+      "isDefault": false
+    },
+    {
+      "id": "Select",
+      "isDefault": false
+    },
+    {
+      "id": "Insert",
+      "isDefault": false
+    },
+    {
+      "id": "Update",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -10,6 +26,9 @@
   "unreadCommentThreads": 0,
   "color": "#F5D1D1",
   "icon": "uk-pounds",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "isManualUpdate": false,
