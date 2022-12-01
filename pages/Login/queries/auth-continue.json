@@ -24,7 +24,7 @@
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -38,12 +38,12 @@
     "jsonPathKeys": [
       "async () => {\n  if (!appsmith.URL.fullPath.includes('#access_token=')) return;\n  appsmith.URL.fullPath.split('#')[1].split('&').forEach(i => {\n    const [key, value] = i.split('=');\n    storeValue(key, value);\n  });\n  navigateTo('App');\n}"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
   "id": "Login_auth.continue",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_638835e8a39c830902346f30"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63885538a39c8309023471e5"
 }
