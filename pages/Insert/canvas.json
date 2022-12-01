@@ -141,7 +141,7 @@
                           "isVisible": true,
                           "isDisabled": false,
                           "index": 2,
-                          "onClick": "{{navigateTo('Home Page', {}, 'SAME_WINDOW')}}"
+                          "onClick": "{{navigateTo('App', {}, 'SAME_WINDOW')}}"
                         }
                       },
                       "isVisible": true,
