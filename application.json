@@ -7,18 +7,6 @@
     {
       "id": "App",
       "isDefault": false
-    },
-    {
-      "id": "Select",
-      "isDefault": false
-    },
-    {
-      "id": "Insert",
-      "isDefault": false
-    },
-    {
-      "id": "Update",
-      "isDefault": false
     }
   ],
   "viewMode": false,
