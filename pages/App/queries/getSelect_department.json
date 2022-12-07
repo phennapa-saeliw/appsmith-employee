@@ -18,6 +18,7 @@
     },
     "pageId": "App",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/rest/v1/department",
       "headers": [
@@ -41,6 +42,7 @@
       "selfReferencingDataPaths": []
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
