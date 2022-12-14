@@ -35,11 +35,12 @@
       "queryParameters": [
         {
           "key": "select",
-          "value": "*"
+          "value": "department_name"
         }
       ],
       "httpMethod": "GET",
-      "selfReferencingDataPaths": []
+      "selfReferencingDataPaths": [],
+      "formData": {}
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [],
