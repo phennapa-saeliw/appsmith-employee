@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun2",
-    "fullyQualifiedName": "JSObject1.myFun2",
+    "name": "signIn",
+    "fullyQualifiedName": "auth.signIn",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,19 +13,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "App",
-    "collectionId": "App_JSObject1",
+    "pageId": "Login1",
+    "collectionId": "Login1_auth",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {}",
+      "body": "() => {\n  return sign_in.run().then(data => {\n    delete data.user;\n    Object.keys(data).forEach(i => {\n      storeValue(i, data[i]);\n    });\n  }).then(() => navigateTo('App'));\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {}"
+      "() => {\n  return sign_in.run().then(data => {\n    delete data.user;\n    Object.keys(data).forEach(i => {\n      storeValue(i, data[i]);\n    });\n  }).then(() => navigateTo('App'));\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "App_JSObject1.myFun2",
+  "id": "Login1_auth.signIn",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63970728e77ccb59f6882ec6"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_639ac21a5b4b533c8eaa7e10"
 }

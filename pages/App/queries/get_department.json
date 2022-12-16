@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "getSelect_division",
+    "name": "get_department",
     "datasource": {
-      "name": "https://ujcpkfgfbyuqpscdduik.supabase.co",
+      "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://ujcpkfgfbyuqpscdduik.supabase.co"
+        "url": "https://dscfsshcuqomvwcvryye.supabase.co"
       },
       "invalids": [],
       "messages": [],
@@ -18,29 +18,31 @@
     },
     "pageId": "App",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/division",
+      "path": "/rest/v1/department",
       "headers": [
         {
           "key": "apikey",
-          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqY3BrZmdmYnl1cXBzY2RkdWlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk3NzUwODksImV4cCI6MTk4NTM1MTA4OX0.E4Dfax3RDRarNhAzMbk0fww9LIyBxq85WUcXuxxpFYg"
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzY2Zzc2hjdXFvbXZ3Y3ZyeXllIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAzODk4NzAsImV4cCI6MTk4NTk2NTg3MH0.-QdV4dkKgRtGD295qBiD__dwUuBcTkqZz9lAEfWWYPM"
         },
         {
           "key": "Authorization",
-          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqY3BrZmdmYnl1cXBzY2RkdWlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk3NzUwODksImV4cCI6MTk4NTM1MTA4OX0.E4Dfax3RDRarNhAzMbk0fww9LIyBxq85WUcXuxxpFYg"
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzY2Zzc2hjdXFvbXZ3Y3ZyeXllIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAzODk4NzAsImV4cCI6MTk4NTk2NTg3MH0.-QdV4dkKgRtGD295qBiD__dwUuBcTkqZz9lAEfWWYPM"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
           "key": "select",
-          "value": "*"
+          "value": "department_name"
         }
       ],
       "httpMethod": "GET",
       "selfReferencingDataPaths": []
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -50,7 +52,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "App_getSelect_division",
+  "id": "App_get_department",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_638ede1a9956db2c13d121be"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_639ae8c97c323677ddd83302"
 }

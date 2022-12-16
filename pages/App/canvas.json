@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 900,
+          "bottomRow": 1030,
           "containerStyle": "none",
           "snapRows": 85,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 70,
+          "version": 71,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -496,7 +496,7 @@
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
               "topRow": 8,
-              "bottomRow": 82,
+              "bottomRow": 95,
               "parentRowSpace": 10,
               "type": "TABS_WIDGET",
               "hideCard": false,
@@ -518,19 +518,121 @@
                   "tabId": "tab1",
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
-                  "bottomRow": 690,
+                  "bottomRow": 860,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 690,
+                  "minHeight": 820,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
                   "children": [
+                    {
+                      "resetFormOnClick": false,
+                      "boxShadow": "none",
+                      "widgetName": "Button4",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 10,
+                      "bottomRow": 14,
+                      "parentRowSpace": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 17.642578125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 43,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Refresh",
+                      "isDisabled": false,
+                      "key": "rkyjxwr49e",
+                      "isDeprecated": false,
+                      "rightColumn": 50,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "xdgx0xj3c0",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "i9kdez6161",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "disabledWhenInvalid": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "PRIMARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "selectPosition",
+                      "isFilterable": false,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "ตำแหน่งงาน",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "labelWidth": "5",
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "shouldScrollContents": true,
+                      "defaultOptionValue": "",
+                      "animateLoading": true,
+                      "parentColumnSpace": 19.8125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 42,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
+                        }
+                      ],
+                      "labelPosition": "Left",
+                      "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
+                      "placeholderText": "🔍 Search Position",
+                      "isDisabled": false,
+                      "key": "4l0dp39ns3",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "2hdf21441b",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "i9kdez6161",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
+                    },
                     {
                       "boxShadow": "none",
                       "widgetName": "selectDivision",
@@ -560,11 +662,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "",
-                      "placeholderText": "Select option",
+                      "options": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()})) }}",
+                      "placeholderText": "🔍 Search Division",
                       "isDisabled": false,
                       "key": "4l0dp39ns3",
                       "labelTextSize": "0.875rem",
@@ -585,64 +690,11 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "boxShadow": "none",
-                      "widgetName": "selectId",
-                      "isFilterable": false,
-                      "displayName": "Select",
-                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "รหัสพนักงาน",
-                      "searchTags": [
-                        "dropdown"
-                      ],
-                      "topRow": 5,
-                      "bottomRow": 9,
-                      "parentRowSpace": 10,
-                      "labelWidth": "5",
-                      "type": "SELECT_WIDGET",
-                      "serverSideFiltering": false,
-                      "hideCard": false,
-                      "shouldScrollContents": true,
-                      "defaultOptionValue": "",
-                      "animateLoading": true,
-                      "parentColumnSpace": 19.8125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 16,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "labelPosition": "Left",
-                      "options": "",
-                      "placeholderText": "Select option",
-                      "isDisabled": false,
-                      "key": "4l0dp39ns3",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 38,
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "ult0hidkvc",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "i9kdez6161",
-                      "labelAlignment": "left",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "minDynamicHeight": 4
-                    },
-                    {
                       "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": false,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 14,
+                      "topRow": 16,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -650,36 +702,6 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
                           "key": "tableData"
@@ -707,6 +729,9 @@
                         },
                         {
                           "key": "primaryColumns.sex.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.division.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -754,11 +779,12 @@
                         "employee_id",
                         "employee_name",
                         "email",
+                        "division_id",
                         "position",
                         "start_date",
                         "dob",
                         "sex",
-                        "division_id"
+                        "division"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -766,7 +792,7 @@
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 67,
+                      "bottomRow": 72,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -883,7 +909,7 @@
                           "alias": "division_id",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "number",
+                          "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -898,7 +924,7 @@
                           "label": "division_id",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{TableSelect.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division_id\"]))}}",
+                          "computedValue": "{{TableSelect.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"].division_name))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -1017,6 +1043,34 @@
                           "computedValue": "{{TableSelect.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sex\"]))}}",
                           "validation": {},
                           "cellBackground": ""
+                        },
+                        "division": {
+                          "allowCellWrapping": false,
+                          "index": 8,
+                          "width": 150,
+                          "originalId": "division",
+                          "id": "division",
+                          "alias": "division",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "division",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{TableSelect.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
@@ -1025,7 +1079,7 @@
                       "rightColumn": 64,
                       "textSize": "0.875rem",
                       "widgetId": "rmn0shn3ij",
-                      "tableData": "{{getSelect_employee.data}}",
+                      "tableData": "{{get_employee.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "i9kdez6161",
@@ -1065,11 +1119,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "",
-                      "placeholderText": "Select option",
+                      "options": "{{get_department.data.map(up => ({ 'label': up.department_name, 'value': up.department_name.toString()})) }}",
+                      "placeholderText": "🔍 Search Department",
                       "isDisabled": false,
                       "key": "4l0dp39ns3",
                       "labelTextSize": "0.875rem",
@@ -1156,64 +1213,6 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 5,
-                      "bottomRow": 9,
-                      "parentRowSpace": 10,
-                      "labelWidth": "5",
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 6.303466796875,
-                      "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
-                      "leftColumn": 42,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "labelPosition": "Left",
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "qq34w6hvk6",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "t6ax8h0vdc",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
-                      "label": "ชื่อพนักงาน",
-                      "version": 2,
-                      "parentId": "i9kdez6161",
-                      "labelAlignment": "left",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "originalTopRow": 21,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "originalBottomRow": 25,
-                      "iconAlign": "left",
-                      "defaultText": "",
-                      "minDynamicHeight": 4
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "inputPosition",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 10,
                       "bottomRow": 14,
                       "parentRowSpace": 10,
@@ -1237,6 +1236,8 @@
                       "labelPosition": "Left",
                       "labelStyle": "",
                       "inputType": "TEXT",
+                      "placeholderText": "🔍 Search Name",
+                      "maxChars": "50",
                       "isDisabled": false,
                       "key": "qq34w6hvk6",
                       "labelTextSize": "0.875rem",
@@ -1244,19 +1245,20 @@
                       "isDeprecated": false,
                       "rightColumn": 38,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "pljj6l1ll4",
+                      "widgetId": "t6ax8h0vdc",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
-                      "label": "ตำแหน่งงาน",
+                      "label": "ชื่อพนักงาน",
                       "version": 2,
                       "parentId": "i9kdez6161",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "originalTopRow": 26,
+                      "regex": "",
+                      "originalTopRow": 21,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 30,
+                      "originalBottomRow": 25,
                       "iconAlign": "left",
                       "defaultText": "",
                       "minDynamicHeight": 4
@@ -1279,6 +1281,7 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 17.642578125,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 57,
                       "dynamicBindingPathList": [
                         {
@@ -1288,7 +1291,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Submit",
+                      "text": "Search",
                       "isDisabled": false,
                       "key": "rkyjxwr49e",
                       "isDeprecated": false,
@@ -1324,6 +1327,7 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 17.642578125,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 50,
                       "dynamicBindingPathList": [
                         {
@@ -1333,7 +1337,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Submit",
+                      "text": "Reset",
                       "isDisabled": false,
                       "key": "rkyjxwr49e",
                       "isDeprecated": false,
@@ -1350,6 +1354,67 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "inputId",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "labelWidth": "5",
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.303466796875,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 16,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "labelPosition": "Left",
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "placeholderText": "🔍 Search Id",
+                      "maxChars": "4",
+                      "isDisabled": false,
+                      "key": "qq34w6hvk6",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 38,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "43wzl5u1ek",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "label": "ชื่อพนักงาน",
+                      "version": 2,
+                      "parentId": "i9kdez6161",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "regex": "\\d",
+                      "originalTopRow": 21,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "originalBottomRow": 25,
+                      "iconAlign": "left",
+                      "defaultText": "",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -1369,14 +1434,14 @@
                   "tabId": "tab2",
                   "widgetName": "Canvas4",
                   "displayName": "Canvas",
-                  "bottomRow": 690,
+                  "bottomRow": 820,
                   "topRow": 0,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 690,
+                  "minHeight": 820,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -1396,36 +1461,6 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.button.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.menuColor"
-                        },
-                        {
-                          "key": "childStylesheet.menuButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.buttonColor"
-                        },
-                        {
-                          "key": "childStylesheet.iconButton.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.saveBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardButtonColor"
-                        },
-                        {
-                          "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
                           "key": "tableData"
@@ -1456,6 +1491,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.division.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -1507,11 +1545,15 @@
                         "start_date",
                         "dob",
                         "sex",
-                        "customColumn1"
+                        "customColumn1",
+                        "division"
                       ],
                       "dynamicPropertyPathList": [
                         {
                           "key": "onRowSelected"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
                         }
                       ],
                       "displayName": "Table",
@@ -1651,7 +1693,7 @@
                           "label": "division_id",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division_id\"]))}}",
+                          "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"].division_name))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -1800,8 +1842,36 @@
                           "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
                           "customAlias": "",
                           "buttonLabel": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( 'Delete'))}}",
-                          "onClick": "{{showModal('delete_Modal')}}",
+                          "onClick": "{{storeValue('delete', Table2.triggeredRow.employee_id);   showModal('delete_Modal')}}",
                           "buttonVariant": "PRIMARY"
+                        },
+                        "division": {
+                          "allowCellWrapping": false,
+                          "index": 8,
+                          "width": 150,
+                          "originalId": "division",
+                          "id": "division",
+                          "alias": "division",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "division",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
@@ -1811,7 +1881,7 @@
                       "textSize": "0.875rem",
                       "widgetId": "0040ezfr92",
                       "allowAddNewRow": false,
-                      "tableData": "{{getSelect_employee.data}}",
+                      "tableData": "{{get_employee.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "906whcrkyb",
@@ -1919,7 +1989,7 @@
                               "dataType": "number",
                               "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.employee_id))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Number Input",
-                              "sourceData": 1008,
+                              "sourceData": 1001,
                               "isCustomField": false,
                               "accessor": "employee_id",
                               "identifier": "employee_id",
@@ -1941,7 +2011,7 @@
                               "dataType": "string",
                               "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.employee_name))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Text Input",
-                              "sourceData": "นิภาลัย ภูเขา",
+                              "sourceData": "หนูดี ดอนกระโดน",
                               "isCustomField": false,
                               "accessor": "employee_name",
                               "identifier": "employee_name",
@@ -1963,7 +2033,7 @@
                               "dataType": "string",
                               "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.email))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Text Input",
-                              "sourceData": "nipalai.ee@gmail.com",
+                              "sourceData": "nuudee789789@gmail.com",
                               "isCustomField": false,
                               "accessor": "email",
                               "identifier": "email",
@@ -1982,12 +2052,12 @@
                             },
                             "division_id": {
                               "children": {},
-                              "dataType": "number",
+                              "dataType": "string",
                               "defaultValue": "",
                               "fieldType": "Select",
-                              "sourceData": 8,
+                              "sourceData": "ฝ่ายต้อนรับ",
                               "isCustomField": false,
-                              "accessor": "division_id",
+                              "accessor": "division",
                               "identifier": "division_id",
                               "position": 2,
                               "originalIdentifier": "division_id",
@@ -2001,14 +2071,15 @@
                               "label": "Division",
                               "labelTextSize": "0.875rem",
                               "serverSideFiltering": false,
-                              "options": "[\n  {\n    \"label\": \"1\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"2\",\n    \"value\": \"2\"\n  },\n  {\n    \"label\": \"3\",\n    \"value\": \"3\"\n  },\n  {\n    \"label\": \"4\",\n    \"value\": \"4\"\n  },\n  {\n    \"label\": \"5\",\n    \"value\": \"5\"\n  },\n  {\n    \"label\": \"6\",\n    \"value\": \"6\"\n  },\n  {\n    \"label\": \"7\",\n    \"value\": \"7\"\n  },\n  {\n    \"label\": \"8\",\n    \"value\": \"8\"\n  },\n  {\n    \"label\": \"9\",\n    \"value\": \"9\"\n  },\n\n  {\n    \"label\": \"10\",\n    \"value\": \"10\"\n  }\n]"
+                              "options": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()})) }}",
+                              "placeholderText": "{{((sourceData, formData, fieldState) => (sourceData.division_id))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}"
                             },
                             "position": {
                               "children": {},
                               "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.position))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "defaultValue": "",
                               "fieldType": "Select",
-                              "sourceData": "พนักงานแคชเชียร์",
+                              "sourceData": "พนักงานต้อนรับ",
                               "isCustomField": false,
                               "accessor": "position",
                               "identifier": "position",
@@ -2024,14 +2095,15 @@
                               "label": "Position",
                               "labelTextSize": "0.875rem",
                               "serverSideFiltering": false,
-                              "options": "[\n  {\n    \"label\": \"Blue\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Green\",\n    \"value\": \"2\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"3\"\n  }\n]"
+                              "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
+                              "placeholderText": "{{((sourceData, formData, fieldState) => (sourceData.position))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}"
                             },
                             "start_date": {
                               "children": {},
                               "dataType": "string",
                               "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.start_date))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Datepicker",
-                              "sourceData": "2565-11-11",
+                              "sourceData": "2565-02-24",
                               "isCustomField": false,
                               "accessor": "start_date",
                               "identifier": "start_date",
@@ -2058,7 +2130,7 @@
                               "dataType": "string",
                               "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.dob))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "fieldType": "Datepicker",
-                              "sourceData": "2543-07-14",
+                              "sourceData": "2542-11-08",
                               "isCustomField": false,
                               "accessor": "dob",
                               "identifier": "dob",
@@ -2101,20 +2173,93 @@
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
                               "label": "Sex"
+                            },
+                            "division": {
+                              "children": {
+                                "division_id": {
+                                  "children": {},
+                                  "dataType": "number",
+                                  "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division.division_id))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                  "fieldType": "Number Input",
+                                  "sourceData": 1,
+                                  "isCustomField": false,
+                                  "accessor": "division_id",
+                                  "identifier": "division_id",
+                                  "position": 0,
+                                  "originalIdentifier": "division_id",
+                                  "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                  "boxShadow": "none",
+                                  "iconAlign": "left",
+                                  "isDisabled": false,
+                                  "isRequired": false,
+                                  "isSpellCheck": false,
+                                  "isVisible": true,
+                                  "labelTextSize": "0.875rem",
+                                  "label": "Division Id"
+                                },
+                                "division_name": {
+                                  "children": {},
+                                  "dataType": "string",
+                                  "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division.division_name))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                  "fieldType": "Text Input",
+                                  "sourceData": "ฝ่ายต้อนรับ",
+                                  "isCustomField": false,
+                                  "accessor": "division_name",
+                                  "identifier": "division_name",
+                                  "position": 1,
+                                  "originalIdentifier": "division_name",
+                                  "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                                  "boxShadow": "none",
+                                  "iconAlign": "left",
+                                  "isDisabled": false,
+                                  "isRequired": false,
+                                  "isSpellCheck": false,
+                                  "isVisible": true,
+                                  "labelTextSize": "0.875rem",
+                                  "label": "Division Name"
+                                }
+                              },
+                              "dataType": "object",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "fieldType": "Object",
+                              "sourceData": {
+                                "division_id": 1,
+                                "division_name": "ฝ่ายต้อนรับ"
+                              },
+                              "isCustomField": false,
+                              "accessor": "division",
+                              "identifier": "division",
+                              "position": 8,
+                              "originalIdentifier": "division",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "boxShadow": "none",
+                              "cellBorderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "cellBoxShadow": "none",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isVisible": true,
+                              "labelTextSize": "0.875rem",
+                              "label": "Division"
                             }
                           },
                           "dataType": "object",
                           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                           "fieldType": "Object",
                           "sourceData": {
-                            "employee_id": 1008,
-                            "employee_name": "นิภาลัย ภูเขา",
-                            "email": "nipalai.ee@gmail.com",
-                            "division_id": 8,
-                            "position": "พนักงานแคชเชียร์",
-                            "start_date": "2565-11-11",
-                            "dob": "2543-07-14",
-                            "sex": "หญิง"
+                            "employee_id": 1004,
+                            "employee_name": "หนูดี ดอนกระโดน",
+                            "email": "nuudee789789@gmail.com",
+                            "division_id": "ฝ่ายต้อนรับ",
+                            "position": "พนักงานต้อนรับ",
+                            "start_date": "2565-02-24",
+                            "dob": "2542-11-08",
+                            "sex": "หญิง",
+                            "division": {
+                              "division_id": 1,
+                              "division_name": "ฝ่ายต้อนรับ"
+                            }
                           },
                           "isCustomField": false,
                           "accessor": "__root_schema__",
@@ -2170,7 +2315,7 @@
                       "bottomRow": 67,
                       "fieldLimitExceeded": false,
                       "parentRowSpace": 10,
-                      "title": "Form",
+                      "title": "Edit Employee",
                       "type": "JSON_FORM_WIDGET",
                       "hideCard": false,
                       "shouldScrollContents": true,
@@ -2193,93 +2338,6 @@
                         },
                         {
                           "key": "resetButtonStyles.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.cellBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.OBJECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.OBJECT.cellBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.CHECKBOX.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.CHECKBOX.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.CURRENCY_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.CURRENCY_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.DATEPICKER.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.DATEPICKER.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.EMAIL_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.EMAIL_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.MULTISELECT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.MULTISELECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.MULTILINE_TEXT_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.MULTILINE_TEXT_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.NUMBER_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.NUMBER_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.PASSWORD_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.PASSWORD_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.PHONE_NUMBER_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.PHONE_NUMBER_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.RADIO_GROUP.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.SELECT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.SELECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.SWITCH.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.TEXT_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.TEXT_INPUT.borderRadius"
                         },
                         {
                           "key": "schema.__root_schema__.children.employee_id.accentColor"
@@ -2324,9 +2382,6 @@
                           "key": "schema.__root_schema__.children.division_id.borderRadius"
                         },
                         {
-                          "key": "schema.__root_schema__.children.position.defaultValue"
-                        },
-                        {
                           "key": "schema.__root_schema__.children.position.accentColor"
                         },
                         {
@@ -2361,6 +2416,45 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.dob.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.position.placeholderText"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division_id.placeholderText"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division_id.options"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.position.options"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_id.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_id.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_id.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_name.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_name.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_name.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.cellBorderRadius"
                         }
                       ],
                       "borderWidth": "1",
@@ -2387,7 +2481,7 @@
                       "isLoading": false,
                       "scrollContents": false,
                       "fixedFooter": true,
-                      "submitButtonLabel": "Submit",
+                      "submitButtonLabel": "Update",
                       "childStylesheet": {
                         "ARRAY": {
                           "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2671,7 +2765,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "ButtonConfirmDelete",
-                      "onClick": "{{DeleteQuery.run(() => getSelect_employee.run(() => closeModal('delete_Modal')), () => {})}}",
+                      "onClick": "{{delete_employee.run(); \nget_employee.run();\ncloseModal('delete_Modal')}}",
                       "buttonColor": "#dc2626",
                       "dynamicPropertyPathList": [
                         {
@@ -2730,8 +2824,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 12,
-                      "bottomRow": 16,
+                      "topRow": 15,
+                      "bottomRow": 19,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -2866,13 +2960,13 @@
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
                               "boxShadow": "none",
-                              "iconAlign": "left",
                               "isDisabled": false,
                               "isRequired": false,
-                              "isSpellCheck": false,
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
-                              "label": "Employee Id"
+                              "label": "Employee Id",
+                              "iconAlign": "left",
+                              "isSpellCheck": false
                             },
                             "employee_name": {
                               "children": {},
@@ -2921,30 +3015,32 @@
                             "division_id": {
                               "children": {},
                               "dataType": "number",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division_id))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-                              "fieldType": "Number Input",
+                              "defaultValue": "",
+                              "fieldType": "Select",
                               "sourceData": 1,
                               "isCustomField": false,
-                              "accessor": "division_id",
+                              "accessor": "division",
                               "identifier": "division_id",
                               "position": 3,
                               "originalIdentifier": "division_id",
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
                               "boxShadow": "none",
-                              "iconAlign": "left",
                               "isDisabled": false,
+                              "isFilterable": false,
                               "isRequired": false,
-                              "isSpellCheck": false,
                               "isVisible": true,
+                              "label": "Division",
                               "labelTextSize": "0.875rem",
-                              "label": "Division Id"
+                              "serverSideFiltering": false,
+                              "options": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()})) }}",
+                              "placeholderText": "+ Add Division"
                             },
                             "position": {
                               "children": {},
                               "dataType": "string",
-                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.position))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-                              "fieldType": "Text Input",
+                              "defaultValue": "",
+                              "fieldType": "Select",
                               "sourceData": "ผู้จัดการต้อนรับส่วนหน้า",
                               "isCustomField": false,
                               "accessor": "position",
@@ -2954,13 +3050,15 @@
                               "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
                               "boxShadow": "none",
-                              "iconAlign": "left",
                               "isDisabled": false,
+                              "isFilterable": false,
                               "isRequired": false,
-                              "isSpellCheck": false,
                               "isVisible": true,
+                              "label": "Position",
                               "labelTextSize": "0.875rem",
-                              "label": "Position"
+                              "serverSideFiltering": false,
+                              "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
+                              "placeholderText": "+ Add Position"
                             },
                             "start_date": {
                               "children": {},
@@ -2978,15 +3076,15 @@
                               "boxShadow": "none",
                               "closeOnSelection": false,
                               "convertToISO": false,
-                              "dateFormat": "YYYY-MM-DD",
+                              "dateFormat": "DD/MM/YYYY",
                               "isDisabled": false,
                               "isRequired": false,
                               "isVisible": true,
                               "label": "Start Date",
-                              "maxDate": "2121-12-31T18:29:00.000Z",
-                              "minDate": "1920-12-31T18:30:00.000Z",
+                              "maxDate": "2626-01-21T01:29:00.000+07:00",
+                              "minDate": "2000-01-01T01:30:00.000+07:00",
                               "shortcuts": false,
-                              "timePrecision": "minute",
+                              "timePrecision": "None",
                               "labelTextSize": "0.875rem"
                             },
                             "dob": {
@@ -3005,15 +3103,15 @@
                               "boxShadow": "none",
                               "closeOnSelection": false,
                               "convertToISO": false,
-                              "dateFormat": "YYYY-MM-DD",
+                              "dateFormat": "DD/MM/YYYY",
                               "isDisabled": false,
                               "isRequired": false,
                               "isVisible": true,
                               "label": "Dob",
-                              "maxDate": "2121-12-31T18:29:00.000Z",
+                              "maxDate": "2621-12-31T18:29:00.000Z",
                               "minDate": "1920-12-31T18:30:00.000Z",
                               "shortcuts": false,
-                              "timePrecision": "minute",
+                              "timePrecision": "None",
                               "labelTextSize": "0.875rem"
                             },
                             "sex": {
@@ -3037,6 +3135,75 @@
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
                               "label": "Sex"
+                            },
+                            "division": {
+                              "children": {
+                                "division_id": {
+                                  "children": {},
+                                  "dataType": "number",
+                                  "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division.division_id))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                                  "fieldType": "Number Input",
+                                  "sourceData": 1,
+                                  "isCustomField": false,
+                                  "accessor": "division_id",
+                                  "identifier": "division_id",
+                                  "position": 0,
+                                  "originalIdentifier": "division_id",
+                                  "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                                  "boxShadow": "none",
+                                  "iconAlign": "left",
+                                  "isDisabled": false,
+                                  "isRequired": false,
+                                  "isSpellCheck": false,
+                                  "isVisible": true,
+                                  "labelTextSize": "0.875rem",
+                                  "label": "Division Id"
+                                },
+                                "division_name": {
+                                  "children": {},
+                                  "dataType": "string",
+                                  "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division.division_name))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                                  "fieldType": "Text Input",
+                                  "sourceData": "ฝ่ายต้อนรับ",
+                                  "isCustomField": false,
+                                  "accessor": "division_name",
+                                  "identifier": "division_name",
+                                  "position": 1,
+                                  "originalIdentifier": "division_name",
+                                  "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                                  "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                                  "boxShadow": "none",
+                                  "iconAlign": "left",
+                                  "isDisabled": false,
+                                  "isRequired": false,
+                                  "isSpellCheck": false,
+                                  "isVisible": true,
+                                  "labelTextSize": "0.875rem",
+                                  "label": "Division Name"
+                                }
+                              },
+                              "dataType": "object",
+                              "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.division))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                              "fieldType": "Object",
+                              "sourceData": {
+                                "division_id": 1,
+                                "division_name": "ฝ่ายต้อนรับ"
+                              },
+                              "isCustomField": false,
+                              "accessor": "division",
+                              "identifier": "division",
+                              "position": 8,
+                              "originalIdentifier": "division",
+                              "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                              "boxShadow": "none",
+                              "cellBorderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+                              "cellBoxShadow": "none",
+                              "isDisabled": false,
+                              "isRequired": false,
+                              "isVisible": false,
+                              "labelTextSize": "0.875rem",
+                              "label": "Division"
                             }
                           },
                           "dataType": "object",
@@ -3086,6 +3253,12 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.dob.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.start_date.maxDate"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.dob.maxDate"
                         }
                       ],
                       "displayName": "JSON Form",
@@ -3094,7 +3267,7 @@
                       "bottomRow": 74,
                       "fieldLimitExceeded": false,
                       "parentRowSpace": 10,
-                      "title": "Add",
+                      "title": "Add Employee",
                       "type": "JSON_FORM_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -3119,93 +3292,6 @@
                         },
                         {
                           "key": "resetButtonStyles.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.cellBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.OBJECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.OBJECT.cellBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.CHECKBOX.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.CHECKBOX.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.CURRENCY_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.CURRENCY_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.DATEPICKER.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.DATEPICKER.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.EMAIL_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.EMAIL_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.MULTISELECT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.MULTISELECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.MULTILINE_TEXT_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.MULTILINE_TEXT_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.NUMBER_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.NUMBER_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.PASSWORD_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.PASSWORD_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.PHONE_NUMBER_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.PHONE_NUMBER_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.RADIO_GROUP.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.SELECT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.SELECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.SWITCH.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.TEXT_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.TEXT_INPUT.borderRadius"
                         },
                         {
                           "key": "schema.__root_schema__.children.employee_id.defaultValue"
@@ -3247,16 +3333,10 @@
                           "key": "schema.__root_schema__.children.email.borderRadius"
                         },
                         {
-                          "key": "schema.__root_schema__.children.division_id.defaultValue"
-                        },
-                        {
                           "key": "schema.__root_schema__.children.division_id.accentColor"
                         },
                         {
                           "key": "schema.__root_schema__.children.division_id.borderRadius"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.position.defaultValue"
                         },
                         {
                           "key": "schema.__root_schema__.children.position.accentColor"
@@ -3290,6 +3370,39 @@
                         },
                         {
                           "key": "schema.__root_schema__.children.sex.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_id.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_id.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_id.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_name.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_name.accentColor"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.children.division_name.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.defaultValue"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.borderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division.cellBorderRadius"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.division_id.options"
+                        },
+                        {
+                          "key": "schema.__root_schema__.children.position.options"
                         }
                       ],
                       "borderWidth": "1",
@@ -3712,8 +3825,34 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "App_getSelect_employee",
-              "name": "getSelect_employee",
+              "id": "App_get_employee",
+              "name": "get_employee",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "App_get_department",
+              "name": "get_department",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "App_get_division",
+              "name": "get_division",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "App_get_position",
+              "name": "get_position",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
