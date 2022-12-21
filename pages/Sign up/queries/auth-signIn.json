@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login1",
-    "collectionId": "Login1_auth",
+    "pageId": "Sign up",
+    "collectionId": "Sign up_auth",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login1_auth.signIn",
+  "id": "Sign up_auth.signIn",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_639ac21a5b4b533c8eaa7e10"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63a28831749a014ec6e59062"
 }

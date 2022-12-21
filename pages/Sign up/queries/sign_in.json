@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "sign_up",
+    "name": "sign_in",
     "datasource": {
       "name": "auth",
       "pluginId": "restapi-plugin",
@@ -13,11 +13,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login1",
+    "pageId": "Sign up",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/auth/v1/signup",
+      "path": "/auth/v1/token",
       "headers": [
         {
           "key": "content-type",
@@ -25,10 +25,21 @@
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [],
-      "body": "{\n  \"email\": \"{{email_sign_up.text}}\",\n  \"password\": \"{{password_sign_up.text}}\"\n}",
+      "queryParameters": [
+        {
+          "key": "grant_type",
+          "value": "password"
+        }
+      ],
+      "body": "{\n  \"email\": \"{{Input1.text}}\",\n  \"password\": \"{{Input2.text}}\"\n}\n",
+      "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ],
       "formData": {
         "apiContentType": "application/json"
       }
@@ -43,15 +54,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "email_sign_up.text",
-      "password_sign_up.text"
+      "Input1.text",
+      "Input2.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login1_sign_up",
+  "id": "Sign up_sign_in",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_639ac21303959a6b55a23975"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2881f749a014ec6e5905c"
 }
