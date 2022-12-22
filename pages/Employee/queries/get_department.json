@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_division",
+    "name": "get_department",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "App",
+    "pageId": "Employee",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/division",
+      "path": "/rest/v1/department",
       "headers": [
         {
           "key": "apikey",
@@ -35,7 +35,7 @@
       "queryParameters": [
         {
           "key": "select",
-          "value": "*,department(department_id,department_name)"
+          "value": "department_name"
         }
       ],
       "httpMethod": "GET",
@@ -52,7 +52,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "App_get_division",
+  "id": "Employee_get_department",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_639ae9107c323677ddd8330c"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192d"
 }

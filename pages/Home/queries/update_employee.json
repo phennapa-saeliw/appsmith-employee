@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "App",
+    "pageId": "Home",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -80,7 +80,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "App_update_employee",
+  "id": "Home_update_employee",
   "deleted": false,
   "gitSyncId": "63857a2e3e748351b7e6cefa_639c89614f35af560dc10e27"
 }

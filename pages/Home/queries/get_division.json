@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_position",
+    "name": "get_division",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "App",
+    "pageId": "Home",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/position",
+      "path": "/rest/v1/division",
       "headers": [
         {
           "key": "apikey",
@@ -35,12 +35,11 @@
       "queryParameters": [
         {
           "key": "select",
-          "value": "*"
+          "value": "*,department(department_id,department_name)"
         }
       ],
       "httpMethod": "GET",
-      "selfReferencingDataPaths": [],
-      "formData": {}
+      "selfReferencingDataPaths": []
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [],
@@ -53,7 +52,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "App_get_position",
+  "id": "Home_get_division",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_639aed0757ef71224576d581"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_639ae9107c323677ddd8330c"
 }

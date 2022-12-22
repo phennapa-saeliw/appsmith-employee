@@ -5,35 +5,19 @@
       "isDefault": true
     },
     {
-      "id": "Sign up",
-      "isDefault": false
-    },
-    {
-      "id": "App",
-      "isDefault": false
-    },
-    {
       "id": "Home",
       "isDefault": false
     },
     {
-      "id": "Search",
-      "isDefault": false
-    },
-    {
-      "id": "Add",
-      "isDefault": false
-    },
-    {
-      "id": "Edit",
-      "isDefault": false
-    },
-    {
-      "id": "Delete",
+      "id": "Employee",
       "isDefault": false
     },
     {
       "id": "User",
+      "isDefault": false
+    },
+    {
+      "id": "Sign up",
       "isDefault": false
     }
   ],

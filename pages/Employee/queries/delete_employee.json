@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_department",
+    "name": "delete_employee",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "App",
+    "pageId": "Employee",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/department",
+      "path": "/rest/v1/employee",
       "headers": [
         {
           "key": "apikey",
@@ -34,25 +34,32 @@
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "select",
-          "value": "department_name"
+          "key": "employee_id",
+          "value": "eq.{{appsmith.store.delete}}"
         }
       ],
-      "httpMethod": "GET",
+      "body": "",
+      "httpMethod": "DELETE",
       "selfReferencingDataPaths": []
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "queryParameters[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.delete"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "App_get_department",
+  "id": "Employee_delete_employee",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_639ae8c97c323677ddd83302"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192a"
 }
