@@ -435,7 +435,7 @@
                         }
                       },
                       "isVisible": true,
-                      "label": "{{appsmith.store.user.email}}",
+                      "label": "{{get_user.data.email}}",
                       "version": 1,
                       "parentId": "aqvskjd9li",
                       "renderMode": "CANVAS",
@@ -506,10 +506,10 @@
                               ],
                               "defaultImage": "",
                               "key": "ipu9nxmpcw",
-                              "image": "https://e7.pngegg.com/pngimages/501/251/png-clipart-kagura-gintoki-sakata-gin-tama-okita-sougo-youtube-youtube-child-face.png",
+                              "image": "https://i.pinimg.com/564x/f7/9d/3c/f79d3c4d85024403495d7299ed407d4d.jpg",
                               "isDeprecated": false,
                               "rightColumn": 48,
-                              "objectFit": "contain",
+                              "objectFit": "cover",
                               "widgetId": "b6z7g6oyr5",
                               "isVisible": true,
                               "version": 1,
@@ -557,7 +557,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "Email\t\t:\t\t{{appsmith.store.user.email}}",
+                              "text": "Email\t\t:\t\t{{get_user.data.email}}",
                               "key": "d6doc2uiea",
                               "isDeprecated": false,
                               "rightColumn": 48,
@@ -642,7 +642,20 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "User_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "User",

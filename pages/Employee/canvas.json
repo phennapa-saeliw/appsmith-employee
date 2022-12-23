@@ -435,7 +435,7 @@
                         }
                       },
                       "isVisible": true,
-                      "label": "{{appsmith.store.user.email}}",
+                      "label": "{{get_user.data.email}}",
                       "version": 1,
                       "parentId": "aqvskjd9li",
                       "renderMode": "CANVAS",
@@ -4192,6 +4192,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Employee_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

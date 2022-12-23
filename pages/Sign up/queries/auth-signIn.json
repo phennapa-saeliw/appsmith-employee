@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return sign_in.run().then(data => {\n    delete data.user;\n    Object.keys(data).forEach(i => {\n      storeValue(i, data[i]);\n    });\n  }).then(() => navigateTo('Home'));\n}",
+      "body": "() => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return sign_in.run().then(data => {\n    delete data.user;\n    Object.keys(data).forEach(i => {\n      storeValue(i, data[i]);\n    });\n  }).then(() => navigateTo('Home'));\n}"
+      "() => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

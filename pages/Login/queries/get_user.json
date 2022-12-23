@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Home",
+    "pageId": "Login",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,10 +29,6 @@
         {
           "key": "Authorization",
           "value": "Bearer {{appsmith.store.access_token}}"
-        },
-        {
-          "key": "content-type",
-          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
@@ -43,7 +39,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "headers[1].value"
@@ -60,7 +56,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Home_get_user",
+  "id": "Login_get_user",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2ecb8bc0e8334c7296e49"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63a51560647efb486b76d8a4"
 }
