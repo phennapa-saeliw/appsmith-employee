@@ -150,7 +150,7 @@
                                 "label"
                               ],
                               "topRow": 2,
-                              "bottomRow": 6,
+                              "bottomRow": 9,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -187,7 +187,7 @@
                               "originalTopRow": 2,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 9,
+                              "originalBottomRow": 6,
                               "fontSize": "3rem",
                               "minDynamicHeight": 4
                             },
@@ -2715,7 +2715,7 @@
               "parentRowSpace": 1,
               "type": "MODAL_WIDGET",
               "hideCard": false,
-              "shouldScrollContents": true,
+              "shouldScrollContents": false,
               "minHeight": 780,
               "animateLoading": true,
               "parentColumnSpace": 1,
@@ -4334,7 +4334,7 @@
               "parentRowSpace": 1,
               "type": "MODAL_WIDGET",
               "hideCard": false,
-              "shouldScrollContents": true,
+              "shouldScrollContents": false,
               "animateLoading": true,
               "parentColumnSpace": 1,
               "dynamicTriggerPathList": [],
@@ -5169,9 +5169,7 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Employee_get_user",
               "name": "get_user",
