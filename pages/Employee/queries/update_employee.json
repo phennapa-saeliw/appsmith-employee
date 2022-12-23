@@ -43,7 +43,7 @@
       "queryParameters": [
         {
           "key": "employee_id",
-          "value": "eq.{{Table2.selectedRow.employee_id}}"
+          "value": "eq.{{table_employee.selectedRow.employee_id}}"
         }
       ],
       "body": "{ \n  \"employee_name\": \"{{JSONForm1.fieldState.employee_name.isVisible ? JSONForm1.formData.employee_name : JSONForm1.sourceData.employee_name}}\",\n  \"email\": \"{{JSONForm1.fieldState.email.isVisible ? JSONForm1.formData.email : JSONForm1.sourceData.email}}\",\n  \"division_id\": \"{{JSONForm1.fieldState.division.isVisible ? JSONForm1.formData.division : JSONForm1.sourceData.division_id}}\",\n  \"position\": \"{{JSONForm1.fieldState.position.isVisible ? JSONForm1.formData.position : JSONForm1.sourceData.position}}\",\n  \"start_date\": \"{{JSONForm1.fieldState.start_date.isVisible ? JSONForm1.formData.start_date : JSONForm1.sourceData.start_date}}\",\n  \"dob\": \"{{JSONForm1.fieldState.dob.isVisible ? JSONForm1.formData.dob : JSONForm1.sourceData.dob}}\",\n  \"sex\": \"{{JSONForm1.fieldState.sex.isVisible ? JSONForm1.formData.sex : JSONForm1.sourceData.sex}}\"\n}",
@@ -73,7 +73,7 @@
       "JSONForm1.fieldState.position.isVisible ? JSONForm1.formData.position : JSONForm1.sourceData.position",
       "JSONForm1.fieldState.sex.isVisible ? JSONForm1.formData.sex : JSONForm1.sourceData.sex",
       "JSONForm1.fieldState.start_date.isVisible ? JSONForm1.formData.start_date : JSONForm1.sourceData.start_date",
-      "Table2.selectedRow.employee_id"
+      "table_employee.selectedRow.employee_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

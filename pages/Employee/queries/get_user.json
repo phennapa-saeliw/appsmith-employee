@@ -29,6 +29,10 @@
         {
           "key": "Authorization",
           "value": "Bearer {{appsmith.store.access_token}}"
+        },
+        {
+          "key": "content-type",
+          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,

@@ -40,8 +40,13 @@
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [],
-      "body": "{ \n\t\"employee_id\": \"{{insert_form.formData.employee_id}}\",\n  \"employee_name\": \"{{insert_form.formData.employee_name}}\",\n  \"email\": \"{{insert_form.formData.email}}\",\n  \"division_id\": \"{{insert_form.formData.division_id}}\",\n  \"position\": \"{{insert_form.formData.position}}\",\n  \"start_date\": \"{{insert_form.formData.start_date}}\",\n  \"dob\": \"{{insert_form.formData.dob}}\",\n  \"sex\": \"{{insert_form.formData.sex}}\"\n}",
+      "queryParameters": [
+        {
+          "key": "employee_id",
+          "value": "eq.{{table_employee.selectedRow.employee_id}}"
+        }
+      ],
+      "body": "{ \n\t\"employee_id\": \"{{add_employee_id.text}}\",\n  \"employee_name\": \"{{add_employee_name.text}}\",\n  \"email\": \"{{add_employee_email.text}}\",\n  \"division_id\": \"{{add_employee_division.selectedOptionValue}}\",\n  \"position\": \"{{add_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{add_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{add_employee_dob.formattedDate}}\",\n  \"sex\": \"{{add_employee_sex.text}}\"\n}",
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "formData": {
@@ -52,20 +57,24 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
+      },
+      {
+        "key": "queryParameters[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "insert_form.formData.division_id",
-      "insert_form.formData.dob",
-      "insert_form.formData.email",
-      "insert_form.formData.employee_id",
-      "insert_form.formData.employee_name",
-      "insert_form.formData.position",
-      "insert_form.formData.sex",
-      "insert_form.formData.start_date"
+      "add_employee_division.selectedOptionValue",
+      "add_employee_dob.formattedDate",
+      "add_employee_email.text",
+      "add_employee_id.text",
+      "add_employee_name.text",
+      "add_employee_position.selectedOptionValue",
+      "add_employee_sex.text",
+      "add_employee_start_date.formattedDate",
+      "table_employee.selectedRow.employee_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

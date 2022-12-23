@@ -249,6 +249,7 @@
                               "boxShadow": "none",
                               "widgetName": "button_group_menu",
                               "isCanvas": false,
+                              "dynamicPropertyPathList": [],
                               "displayName": "Button Group",
                               "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
                               "searchTags": [
@@ -312,7 +313,8 @@
                                   "isDisabled": false,
                                   "isVisible": true,
                                   "buttonColor": "#231f20",
-                                  "iconName": "log-out"
+                                  "iconName": "log-out",
+                                  "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}"
                                 }
                               },
                               "type": "BUTTON_GROUP_WIDGET",
@@ -328,6 +330,9 @@
                                 },
                                 {
                                   "key": "groupButtons.groupButtona5qesk46cp.onClick"
+                                },
+                                {
+                                  "key": "groupButtons.groupButtonndbodeae3g.onClick"
                                 }
                               ],
                               "leftColumn": 0,
@@ -387,6 +392,7 @@
                       "isCompact": false,
                       "boxShadow": "none",
                       "widgetName": "menu_button_user",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Menu Button",
                       "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
                       "topRow": 0,
@@ -399,6 +405,9 @@
                       "dynamicTriggerPathList": [
                         {
                           "key": "menuItems.menuItem1.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem2.onClick"
                         }
                       ],
                       "leftColumn": 51,
@@ -431,7 +440,8 @@
                           "widgetId": "",
                           "isVisible": true,
                           "isDisabled": false,
-                          "index": 1
+                          "index": 1,
+                          "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}"
                         }
                       },
                       "isVisible": true,
