@@ -38,11 +38,11 @@
   },
   "properties": {
     "colors": {
-      "primaryColor": "#1DDEFF",
+      "primaryColor": "#26B5FF",
       "backgroundColor": "#F8F9FA"
     },
     "borderRadius": {
-      "appBorderRadius": "0.375rem"
+      "appBorderRadius": "1.5rem"
     },
     "boxShadow": {
       "appBoxShadow": "none"
