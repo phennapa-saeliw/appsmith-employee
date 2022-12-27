@@ -2347,7 +2347,7 @@
                                   "key": "onOptionChange"
                                 },
                                 {
-                                  "key": "isDisabled"
+                                  "key": "isVisible"
                                 }
                               ],
                               "displayName": "Select",
@@ -2380,13 +2380,13 @@
                                   "key": "options"
                                 },
                                 {
-                                  "key": "isDisabled"
+                                  "key": "isVisible"
                                 }
                               ],
                               "labelPosition": "Top",
                               "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
                               "placeholderText": "+ Add Position",
-                              "isDisabled": "{{!!add_employee_division.isDisabled}}",
+                              "isDisabled": false,
                               "key": "ux9df07dm6",
                               "labelTextSize": "1rem",
                               "isRequired": true,
@@ -2395,7 +2395,7 @@
                               "dynamicHeight": "FIXED",
                               "widgetId": "urn5zswsvs",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
+                              "isVisible": "{{!!add_employee_division.selectedOptionValue}}",
                               "version": 1,
                               "parentId": "qraedk4bov",
                               "labelAlignment": "left",
@@ -3957,9 +3957,7 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Employee_get_user",
               "name": "get_user",
