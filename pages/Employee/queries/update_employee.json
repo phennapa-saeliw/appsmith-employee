@@ -43,10 +43,10 @@
       "queryParameters": [
         {
           "key": "employee_id",
-          "value": "eq.{{table_employee.selectedRow.employee_id}}"
+          "value": "eq.{{appsmith.store.edit}}"
         }
       ],
-      "body": "{ \n  \"employee_name\": \"{{JSONForm1.fieldState.employee_name.isVisible ? JSONForm1.formData.employee_name : JSONForm1.sourceData.employee_name}}\",\n  \"email\": \"{{JSONForm1.fieldState.email.isVisible ? JSONForm1.formData.email : JSONForm1.sourceData.email}}\",\n  \"division_id\": \"{{JSONForm1.fieldState.division.isVisible ? JSONForm1.formData.division : JSONForm1.sourceData.division_id}}\",\n  \"position\": \"{{JSONForm1.fieldState.position.isVisible ? JSONForm1.formData.position : JSONForm1.sourceData.position}}\",\n  \"start_date\": \"{{JSONForm1.fieldState.start_date.isVisible ? JSONForm1.formData.start_date : JSONForm1.sourceData.start_date}}\",\n  \"dob\": \"{{JSONForm1.fieldState.dob.isVisible ? JSONForm1.formData.dob : JSONForm1.sourceData.dob}}\",\n  \"sex\": \"{{JSONForm1.fieldState.sex.isVisible ? JSONForm1.formData.sex : JSONForm1.sourceData.sex}}\"\n}",
+      "body": "{ \n  \"employee_name\": \"{{edit_employee_name.text}}\",\n  \"email\": \"{{edit_employee_email.text}}\",\n  \"division_id\": \"{{edit_employee_division.selectedOptionValue}}\",\n  \"position\": \"{{edit_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{edit_employee_start_date.selectedDate}}\",\n  \"dob\": \"{{edit_employee_dob.selectedDate}}\",\n  \"sex\": \"{{edit_employee_sex.text}}\"\n}",
       "httpMethod": "PATCH",
       "selfReferencingDataPaths": [],
       "formData": {
@@ -66,14 +66,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "JSONForm1.fieldState.division.isVisible ? JSONForm1.formData.division : JSONForm1.sourceData.division_id",
-      "JSONForm1.fieldState.dob.isVisible ? JSONForm1.formData.dob : JSONForm1.sourceData.dob",
-      "JSONForm1.fieldState.email.isVisible ? JSONForm1.formData.email : JSONForm1.sourceData.email",
-      "JSONForm1.fieldState.employee_name.isVisible ? JSONForm1.formData.employee_name : JSONForm1.sourceData.employee_name",
-      "JSONForm1.fieldState.position.isVisible ? JSONForm1.formData.position : JSONForm1.sourceData.position",
-      "JSONForm1.fieldState.sex.isVisible ? JSONForm1.formData.sex : JSONForm1.sourceData.sex",
-      "JSONForm1.fieldState.start_date.isVisible ? JSONForm1.formData.start_date : JSONForm1.sourceData.start_date",
-      "table_employee.selectedRow.employee_id"
+      "appsmith.store.edit",
+      "edit_employee_division.selectedOptionValue",
+      "edit_employee_dob.selectedDate",
+      "edit_employee_email.text",
+      "edit_employee_name.text",
+      "edit_employee_position.selectedOptionValue",
+      "edit_employee_sex.text",
+      "edit_employee_start_date.selectedDate"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
