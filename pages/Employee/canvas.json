@@ -2395,7 +2395,7 @@
                               "dynamicHeight": "FIXED",
                               "widgetId": "urn5zswsvs",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": "{{add_employee_division.isDisabled}}",
+                              "isVisible": "{{!!add_employee_division.isDisabled}}",
                               "version": 1,
                               "parentId": "qraedk4bov",
                               "labelAlignment": "left",
