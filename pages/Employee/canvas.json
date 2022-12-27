@@ -3378,6 +3378,9 @@
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onOptionChange"
+                                },
+                                {
+                                  "key": "isVisible"
                                 }
                               ],
                               "displayName": "Select",
@@ -3411,6 +3414,9 @@
                                 },
                                 {
                                   "key": "placeholderText"
+                                },
+                                {
+                                  "key": "isVisible"
                                 }
                               ],
                               "labelPosition": "Top",
@@ -3425,7 +3431,7 @@
                               "dynamicHeight": "FIXED",
                               "widgetId": "tzpk6qfud8",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
+                              "isVisible": "{{!!edit_employee_division.selectedOptionValue}}",
                               "version": 1,
                               "parentId": "azkmj8jdyh",
                               "labelAlignment": "left",
