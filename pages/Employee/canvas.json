@@ -1820,6 +1820,7 @@
                               ],
                               "topRow": 33,
                               "bottomRow": 40,
+                              "tooltip": "Enter 'ชาย' or 'หญิง'",
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -2216,7 +2217,7 @@
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_start_date",
-                              "minDate": "1950-12-01T18:30:00.000+07:00",
+                              "minDate": "1950-12-01T00:00:00.000+07:00",
                               "dateFormat": "DD/MM/YYYY",
                               "dynamicPropertyPathList": [
                                 {
@@ -2278,12 +2279,9 @@
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_dob",
-                              "minDate": "1950-01-01T01:30:00.000+07:00",
+                              "minDate": "1950-01-01T00:00:00.000+07:00",
                               "dateFormat": "DD/MM/YYYY",
                               "dynamicPropertyPathList": [
-                                {
-                                  "key": "defaultDate"
-                                },
                                 {
                                   "key": "onDateSelected"
                                 }
@@ -2319,7 +2317,6 @@
                               "onDateSelected": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
                               "labelTextSize": "1rem",
                               "isRequired": true,
-                              "defaultDate": "",
                               "isDeprecated": false,
                               "rightColumn": 30,
                               "dynamicHeight": "FIXED",
@@ -2338,7 +2335,7 @@
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
                               "closeOnSelection": false,
-                              "maxDate": "2022-12-26T11:25:50.505+07:00",
+                              "maxDate": "2022-12-26T00:00:00.000+07:00",
                               "minDynamicHeight": 4
                             },
                             {
@@ -2348,6 +2345,9 @@
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onOptionChange"
+                                },
+                                {
+                                  "key": "isDisabled"
                                 }
                               ],
                               "displayName": "Select",
@@ -2378,12 +2378,15 @@
                                 },
                                 {
                                   "key": "options"
+                                },
+                                {
+                                  "key": "isDisabled"
                                 }
                               ],
                               "labelPosition": "Top",
                               "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
                               "placeholderText": "+ Add Position",
-                              "isDisabled": false,
+                              "isDisabled": "{{add_employee_division.isDisabled}}",
                               "key": "ux9df07dm6",
                               "labelTextSize": "1rem",
                               "isRequired": true,
@@ -2833,7 +2836,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.selectedRow.division_id))(edit_employee_division.options, edit_employee_division.serverSideFiltering) }}",
+                              "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
                               "dynamicTriggerPathList": [
@@ -2851,9 +2854,6 @@
                                 },
                                 {
                                   "key": "placeholderText"
-                                },
-                                {
-                                  "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Top",
@@ -3239,7 +3239,7 @@
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "edit_employee_start_date",
-                              "minDate": "1950-12-01T18:30:00.000+07:00",
+                              "minDate": "1950-12-01T00:00:00.000+07:00",
                               "dateFormat": "DD/MM/YYYY",
                               "dynamicPropertyPathList": [
                                 {
@@ -3299,13 +3299,13 @@
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
                               "closeOnSelection": false,
-                              "maxDate": "2122-12-01T11:26:02.022+07:00",
+                              "maxDate": "2122-12-01T00:00:00.000+07:00",
                               "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "edit_employee_dob",
-                              "minDate": "1950-01-01T01:30:00.000+07:00",
+                              "minDate": "1950-01-01T00:00:00.000+07:00",
                               "dateFormat": "DD/MM/YYYY",
                               "dynamicPropertyPathList": [
                                 {
@@ -3368,7 +3368,7 @@
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
                               "closeOnSelection": false,
-                              "maxDate": "2022-12-26T11:26:55.5555+07:00",
+                              "maxDate": "2022-12-26T00:00:00.000+07:00",
                               "minDynamicHeight": 4
                             },
                             {
@@ -3393,7 +3393,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.selectedRow.position))(edit_employee_position.options, edit_employee_position.serverSideFiltering) }}",
+                              "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
                               "dynamicTriggerPathList": [
@@ -3411,9 +3411,6 @@
                                 },
                                 {
                                   "key": "placeholderText"
-                                },
-                                {
-                                  "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Top",
@@ -3960,7 +3957,9 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Employee_get_user",
               "name": "get_user",
