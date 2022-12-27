@@ -2347,7 +2347,7 @@
                                   "key": "onOptionChange"
                                 },
                                 {
-                                  "key": "isVisible"
+                                  "key": "isDisabled"
                                 }
                               ],
                               "displayName": "Select",
@@ -2380,13 +2380,13 @@
                                   "key": "options"
                                 },
                                 {
-                                  "key": "isVisible"
+                                  "key": "isDisabled"
                                 }
                               ],
                               "labelPosition": "Top",
                               "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
                               "placeholderText": "+ Add Position",
-                              "isDisabled": false,
+                              "isDisabled": "{{!!add_employee_division.isDisabled}}",
                               "key": "ux9df07dm6",
                               "labelTextSize": "1rem",
                               "isRequired": true,
@@ -2395,7 +2395,7 @@
                               "dynamicHeight": "FIXED",
                               "widgetId": "urn5zswsvs",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": "{{!!add_employee_division.isDisabled}}",
+                              "isVisible": true,
                               "version": 1,
                               "parentId": "qraedk4bov",
                               "labelAlignment": "left",
