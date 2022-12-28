@@ -259,7 +259,7 @@
                                   "isVisible": true,
                                   "buttonColor": "#231f20",
                                   "iconName": "log-out",
-                                  "onClick": "{{navigateTo('Login',{}, 'SAME_WINDOW')}}"
+                                  "onClick": "{{log_out.Logout()}}"
                                 }
                               },
                               "type": "BUTTON_GROUP_WIDGET",
@@ -439,7 +439,7 @@
                           "isVisible": true,
                           "isDisabled": false,
                           "index": 1,
-                          "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}"
+                          "onClick": "{{log_out.Logout()}}"
                         }
                       },
                       "isVisible": true,
@@ -2901,7 +2901,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.triggeredRow.division_id))(edit_employee_division.options, edit_employee_division.serverSideFiltering) }}",
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( default))(edit_employee_division.options, edit_employee_division.serverSideFiltering) }}",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
                               "dynamicTriggerPathList": [
@@ -4089,9 +4089,7 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Employee_get_user",
               "name": "get_user",

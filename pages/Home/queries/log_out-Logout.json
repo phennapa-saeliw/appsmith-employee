@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "signIn",
-    "fullyQualifiedName": "auth.signIn",
+    "name": "Logout",
+    "fullyQualifiedName": "log_out.Logout",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login",
-    "collectionId": "Login_auth",
+    "pageId": "Home",
+    "collectionId": "Home_log_out",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return sign_in.run().then(data => {\n    delete data.user;\n    Object.keys(data).forEach(i => {\n      storeValue(i, data[i]);\n    });\n  }).then(() => navigateTo('Home'));\n}",
+      "body": "() => {\n  Object.keys(appsmith.store).map(key => storeValue(key, undefined));\n  navigateTo('Login');\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return sign_in.run().then(data => {\n    delete data.user;\n    Object.keys(data).forEach(i => {\n      storeValue(i, data[i]);\n    });\n  }).then(() => navigateTo('Home'));\n}"
+      "() => {\n  Object.keys(appsmith.store).map(key => storeValue(key, undefined));\n  navigateTo('Login');\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_auth.signIn",
+  "id": "Home_log_out.Logout",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac2b2bb7e37c573eaacfde"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac698a647efb486b77366a"
 }

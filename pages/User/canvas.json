@@ -314,7 +314,7 @@
                                   "isVisible": true,
                                   "buttonColor": "#231f20",
                                   "iconName": "log-out",
-                                  "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}"
+                                  "onClick": "{{log_out.Logout()}}"
                                 }
                               },
                               "type": "BUTTON_GROUP_WIDGET",
@@ -441,7 +441,7 @@
                           "isVisible": true,
                           "isDisabled": false,
                           "index": 1,
-                          "onClick": "{{navigateTo('Login', {}, 'SAME_WINDOW')}}"
+                          "onClick": "{{log_out.Logout()}}"
                         }
                       },
                       "isVisible": true,
