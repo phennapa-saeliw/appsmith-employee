@@ -40,6 +40,10 @@
         {
           "key": "select",
           "value": "*"
+        },
+        {
+          "key": "order",
+          "value": "id.asc"
         }
       ],
       "httpMethod": "GET",

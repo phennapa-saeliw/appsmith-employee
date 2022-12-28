@@ -927,10 +927,10 @@
                               "parentId": "evmmdm5v6t",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 4,
+                              "originalTopRow": 6,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 8,
+                              "originalBottomRow": 10,
                               "fontSize": "1rem",
                               "minDynamicHeight": 4
                             },
@@ -1017,7 +1017,7 @@
                               "originalTopRow": 0,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 4,
+                              "originalBottomRow": 6,
                               "fontSize": "1.25rem",
                               "minDynamicHeight": 4
                             },
@@ -1068,10 +1068,10 @@
                               "parentId": "evmmdm5v6t",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 4,
+                              "originalTopRow": 6,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 8,
+                              "originalBottomRow": 10,
                               "fontSize": "1.25rem",
                               "minDynamicHeight": 4
                             }

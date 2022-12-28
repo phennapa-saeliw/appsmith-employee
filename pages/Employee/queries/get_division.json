@@ -40,6 +40,10 @@
         {
           "key": "select",
           "value": "*,department(department_id,department_name)"
+        },
+        {
+          "key": "order",
+          "value": "division_id.asc"
         }
       ],
       "httpMethod": "GET",

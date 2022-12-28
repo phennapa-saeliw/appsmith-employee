@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1170,
+          "bottomRow": 1410,
           "containerStyle": "none",
           "snapRows": 85,
           "parentRowSpace": 1,
@@ -1741,6 +1741,74 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
+                              "widgetName": "add_employee_sex",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onSelectionChange"
+                                }
+                              ],
+                              "displayName": "Radio Group",
+                              "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
+                              "searchTags": [
+                                "choice"
+                              ],
+                              "topRow": 33,
+                              "bottomRow": 40,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "type": "RADIO_GROUP_WIDGET",
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 19.8125,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onSelectionChange"
+                                }
+                              ],
+                              "leftColumn": 33,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "labelPosition": "Top",
+                              "onSelectionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "options": [
+                                {
+                                  "label": "ชาย",
+                                  "value": "ชาย"
+                                },
+                                {
+                                  "label": "หญิง",
+                                  "value": "หญิง"
+                                }
+                              ],
+                              "isDisabled": false,
+                              "key": "a4zcbgxme5",
+                              "labelTextSize": "1rem",
+                              "isRequired": true,
+                              "isDeprecated": false,
+                              "rightColumn": 62,
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "40m8tw2612",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "Label",
+                              "version": 1,
+                              "parentId": "qraedk4bov",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "originalTopRow": 33,
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 40,
+                              "isInline": true,
+                              "alignment": "left",
+                              "minDynamicHeight": 4
+                            },
+                            {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_division",
                               "isFilterable": false,
@@ -1800,72 +1868,6 @@
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
                               "onOptionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                              "widgetName": "add_employee_sex",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "topRow": 33,
-                              "bottomRow": 40,
-                              "tooltip": "Enter 'ชาย' or 'หญิง'",
-                              "parentRowSpace": 10,
-                              "labelWidth": 5,
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 6.625,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
-                              "resetOnSubmit": true,
-                              "leftColumn": 33,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                }
-                              ],
-                              "labelPosition": "Top",
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "4",
-                              "placeholderText": "+ Add Sex",
-                              "isDisabled": false,
-                              "key": "sn0hkxemmx",
-                              "labelTextSize": "1rem",
-                              "isRequired": true,
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
-                              "isDeprecated": false,
-                              "rightColumn": 62,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "4f753il49s",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "label": "Sex",
-                              "version": 2,
-                              "parentId": "qraedk4bov",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "1.5rem",
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
                               "minDynamicHeight": 4
                             },
                             {
@@ -2096,8 +2098,10 @@
                               "parentId": "qraedk4bov",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 42,
                               "disabledWhenInvalid": true,
                               "borderRadius": "1.5rem",
+                              "originalBottomRow": 46,
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
@@ -2819,6 +2823,77 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
+                              "widgetName": "edit_employee_sex",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onSelectionChange"
+                                }
+                              ],
+                              "displayName": "Radio Group",
+                              "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
+                              "searchTags": [
+                                "choice"
+                              ],
+                              "topRow": 33,
+                              "bottomRow": 40,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "type": "RADIO_GROUP_WIDGET",
+                              "hideCard": false,
+                              "defaultOptionValue": "{{table_employee.triggeredRow.sex}}",
+                              "animateLoading": true,
+                              "parentColumnSpace": 19.8125,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onSelectionChange"
+                                }
+                              ],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "defaultOptionValue"
+                                }
+                              ],
+                              "labelPosition": "Top",
+                              "onSelectionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "options": [
+                                {
+                                  "label": "ชาย",
+                                  "value": "ชาย"
+                                },
+                                {
+                                  "label": "หญิง",
+                                  "value": "หญิง"
+                                }
+                              ],
+                              "isDisabled": false,
+                              "key": "a4zcbgxme5",
+                              "labelTextSize": "1rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 30,
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "ttamss43iv",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "Label",
+                              "version": 1,
+                              "parentId": "azkmj8jdyh",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "originalTopRow": 33,
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 40,
+                              "isInline": true,
+                              "alignment": "left",
+                              "minDynamicHeight": 4
+                            },
+                            {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "edit_employee_division",
                               "isFilterable": false,
@@ -2878,74 +2953,6 @@
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
                               "onOptionChange": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                              "widgetName": "edit_employee_sex",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "topRow": 33,
-                              "bottomRow": 40,
-                              "parentRowSpace": 10,
-                              "labelWidth": 5,
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 6.625,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
-                              "resetOnSubmit": true,
-                              "leftColumn": 1,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "defaultText"
-                                }
-                              ],
-                              "labelPosition": "Top",
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "4",
-                              "placeholderText": "+ Add Sex",
-                              "isDisabled": false,
-                              "key": "sn0hkxemmx",
-                              "labelTextSize": "1rem",
-                              "isRequired": false,
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
-                              "isDeprecated": false,
-                              "rightColumn": 30,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "1n7awoz2b0",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "label": "Sex",
-                              "version": 2,
-                              "parentId": "azkmj8jdyh",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "1.5rem",
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "{{table_employee.triggeredRow.sex}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -3166,7 +3173,7 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 46,
+                              "leftColumn": 45,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "buttonColor"
@@ -3176,7 +3183,7 @@
                               "isDisabled": false,
                               "key": "hvxoe5uoo2",
                               "isDeprecated": false,
-                              "rightColumn": 62,
+                              "rightColumn": 61,
                               "isDefaultClickDisabled": true,
                               "widgetId": "monmu512z8",
                               "isVisible": true,
@@ -3185,8 +3192,10 @@
                               "parentId": "azkmj8jdyh",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 45,
                               "disabledWhenInvalid": true,
                               "borderRadius": "1.5rem",
+                              "originalBottomRow": 49,
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
@@ -3231,8 +3240,10 @@
                               "parentId": "azkmj8jdyh",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 42,
                               "disabledWhenInvalid": false,
                               "borderRadius": "1.5rem",
+                              "originalBottomRow": 46,
                               "buttonVariant": "SECONDARY",
                               "placement": "CENTER"
                             },
@@ -3377,9 +3388,6 @@
                               "isFilterable": false,
                               "dynamicPropertyPathList": [
                                 {
-                                  "key": "onOptionChange"
-                                },
-                                {
                                   "key": "isVisible"
                                 }
                               ],
@@ -3518,8 +3526,8 @@
               "searchTags": [
                 "dropdown"
               ],
-              "topRow": 88,
-              "bottomRow": 92,
+              "topRow": 112,
+              "bottomRow": 116,
               "parentRowSpace": 10,
               "labelWidth": "4",
               "type": "SELECT_WIDGET",
@@ -3569,7 +3577,7 @@
             {
               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-              "topRow": 101,
+              "topRow": 126,
               "labelWidth": "4",
               "type": "INPUT_WIDGET_V2",
               "animateLoading": true,
@@ -3593,7 +3601,7 @@
               "isLoading": false,
               "regex": "\\d",
               "borderRadius": "1.5rem",
-              "originalBottomRow": 25,
+              "originalBottomRow": 130,
               "widgetName": "inputId",
               "dynamicPropertyPathList": [
                 {
@@ -3607,7 +3615,7 @@
                 "number",
                 "textarea"
               ],
-              "bottomRow": 105,
+              "bottomRow": 130,
               "parentRowSpace": 10,
               "autoFocus": false,
               "hideCard": false,
@@ -3628,7 +3636,7 @@
               "parentId": "0",
               "labelAlignment": "right",
               "renderMode": "CANVAS",
-              "originalTopRow": 21,
+              "originalTopRow": 126,
               "maxDynamicHeight": 9000,
               "iconAlign": "left",
               "defaultText": "",
@@ -3649,8 +3657,8 @@
               "searchTags": [
                 "dropdown"
               ],
-              "topRow": 105,
-              "bottomRow": 109,
+              "topRow": 129,
+              "bottomRow": 133,
               "parentRowSpace": 10,
               "labelWidth": "5",
               "type": "SELECT_WIDGET",
@@ -3712,8 +3720,8 @@
               "searchTags": [
                 "dropdown"
               ],
-              "topRow": 96,
-              "bottomRow": 100,
+              "topRow": 120,
+              "bottomRow": 124,
               "parentRowSpace": 10,
               "labelWidth": "4",
               "type": "SELECT_WIDGET",
@@ -3765,7 +3773,7 @@
             {
               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-              "topRow": 96,
+              "topRow": 121,
               "labelWidth": "4",
               "type": "INPUT_WIDGET_V2",
               "animateLoading": true,
@@ -3789,7 +3797,7 @@
               "isLoading": false,
               "regex": "",
               "borderRadius": "1.5rem",
-              "originalBottomRow": 25,
+              "originalBottomRow": 125,
               "widgetName": "inputName",
               "dynamicPropertyPathList": [
                 {
@@ -3803,7 +3811,7 @@
                 "number",
                 "textarea"
               ],
-              "bottomRow": 100,
+              "bottomRow": 125,
               "parentRowSpace": 10,
               "autoFocus": false,
               "hideCard": false,
@@ -3824,7 +3832,7 @@
               "parentId": "0",
               "labelAlignment": "right",
               "renderMode": "CANVAS",
-              "originalTopRow": 21,
+              "originalTopRow": 121,
               "maxDynamicHeight": 9000,
               "iconAlign": "left",
               "defaultText": "",
@@ -3847,8 +3855,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 100,
-              "bottomRow": 104,
+              "topRow": 124,
+              "bottomRow": 128,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -3878,8 +3886,10 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "originalTopRow": 124,
               "disabledWhenInvalid": false,
               "borderRadius": "1.5rem",
+              "originalBottomRow": 128,
               "buttonVariant": "SECONDARY",
               "placement": "CENTER"
             },
@@ -3894,8 +3904,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 96,
-              "bottomRow": 100,
+              "topRow": 120,
+              "bottomRow": 124,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -3921,10 +3931,80 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "originalTopRow": 120,
               "disabledWhenInvalid": false,
               "borderRadius": "1.5rem",
+              "originalBottomRow": 124,
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "RadioGroup1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onSelectionChange"
+                }
+              ],
+              "displayName": "Radio Group",
+              "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
+              "searchTags": [
+                "choice"
+              ],
+              "topRow": 104,
+              "bottomRow": 111,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "RADIO_GROUP_WIDGET",
+              "hideCard": false,
+              "defaultOptionValue": "",
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSelectionChange"
+                }
+              ],
+              "leftColumn": 33,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "labelPosition": "Top",
+              "onSelectionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+              "options": [
+                {
+                  "label": "ชาย",
+                  "value": "ชาย"
+                },
+                {
+                  "label": "หญิง",
+                  "value": "หญิง"
+                }
+              ],
+              "isDisabled": false,
+              "key": "a4zcbgxme5",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 53,
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "2zguv1aklm",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "label": "Label",
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "originalTopRow": 104,
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 111,
+              "isInline": true,
+              "alignment": "left",
+              "minDynamicHeight": 4
             }
           ]
         },
@@ -3963,7 +4043,9 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Employee_get_user",
               "name": "get_user",
