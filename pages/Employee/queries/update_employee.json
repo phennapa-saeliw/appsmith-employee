@@ -46,7 +46,7 @@
           "value": "eq.{{appsmith.store.edit}}"
         }
       ],
-      "body": "{ \n  \"employee_name\": \"{{edit_employee_name.text}}\",\n  \"email\": \"{{edit_employee_email.text}}\",\n  \"division_id\": \"{{edit_employee_division.selectedOptionValue}}\",\n  \"position\": \"{{edit_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{edit_employee_start_date.selectedDate}}\",\n  \"dob\": \"{{edit_employee_dob.selectedDate}}\",\n  \"sex\": \"{{edit_employee_sex.selectedOptionValue}}\"\n}",
+      "body": "{ \n  \"employee_name\": \"{{edit_employee_name.text}}\",\n  \"email\": \"{{edit_employee_email.text}}\",\n  \"division_id\": \"{{edit_employee_division.selectedOptionValue}}\",\n  \"position\": \"{{edit_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{edit_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{edit_employee_dob.formattedDate}}\",\n  \"sex\": \"{{edit_employee_sex.selectedOptionValue}}\"\n}",
       "httpMethod": "PATCH",
       "selfReferencingDataPaths": [],
       "formData": {
@@ -68,12 +68,12 @@
     "jsonPathKeys": [
       "appsmith.store.edit",
       "edit_employee_division.selectedOptionValue",
-      "edit_employee_dob.selectedDate",
+      "edit_employee_dob.formattedDate",
       "edit_employee_email.text",
       "edit_employee_name.text",
       "edit_employee_position.selectedOptionValue",
       "edit_employee_sex.selectedOptionValue",
-      "edit_employee_start_date.selectedDate"
+      "edit_employee_start_date.formattedDate"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
