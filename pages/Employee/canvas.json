@@ -1743,11 +1743,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "add_employee_sex",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onSelectionChange"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Radio Group",
                               "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
                               "searchTags": [
@@ -1774,7 +1770,7 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "onSelectionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onSelectionChange": "",
                               "options": [
                                 {
                                   "label": "ชาย",
@@ -1790,7 +1786,7 @@
                               "labelTextSize": "1rem",
                               "isRequired": true,
                               "isDeprecated": false,
-                              "rightColumn": 62,
+                              "rightColumn": 52,
                               "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "40m8tw2612",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1812,11 +1808,7 @@
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_division",
                               "isFilterable": false,
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onOptionChange"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
                               "labelText": "Division",
@@ -1867,17 +1859,13 @@
                               "isLoading": false,
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
-                              "onOptionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onOptionChange": "",
                               "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_email",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
@@ -1916,7 +1904,7 @@
                               "key": "sn0hkxemmx",
                               "labelTextSize": "1rem",
                               "isRequired": true,
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onTextChanged": "",
                               "isDeprecated": false,
                               "rightColumn": 30,
                               "dynamicHeight": "FIXED",
@@ -1964,11 +1952,7 @@
                               "regex": "\\D",
                               "borderRadius": "1.5rem",
                               "widgetName": "add_employee_name",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Input",
                               "searchTags": [
                                 "form",
@@ -1989,7 +1973,7 @@
                               "labelPosition": "Top",
                               "key": "sn0hkxemmx",
                               "labelTextSize": "1rem",
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onTextChanged": "",
                               "isDeprecated": false,
                               "rightColumn": 62,
                               "widgetId": "glnaw4tfqk",
@@ -2180,11 +2164,7 @@
                               "regex": "\\d",
                               "borderRadius": "1.5rem",
                               "widgetName": "add_employee_id",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Input",
                               "searchTags": [
                                 "form",
@@ -2205,7 +2185,7 @@
                               "labelPosition": "Top",
                               "key": "sn0hkxemmx",
                               "labelTextSize": "1rem",
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onTextChanged": "",
                               "isDeprecated": false,
                               "rightColumn": 30,
                               "widgetId": "l14gzzmlnw",
@@ -2221,13 +2201,8 @@
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_start_date",
-                              "minDate": "1950-12-01T00:00:00.000+07:00",
                               "dateFormat": "DD/MM/YYYY",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onDateSelected"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "DatePicker",
                               "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
                               "searchTags": [
@@ -2276,20 +2251,14 @@
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
-                              "closeOnSelection": false,
-                              "maxDate": "2122-12-01T00:00:00.000+07:00",
+                              "closeOnSelection": true,
                               "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "add_employee_dob",
-                              "minDate": "1950-01-01T00:00:00.000+07:00",
                               "dateFormat": "DD/MM/YYYY",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onDateSelected"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "DatePicker",
                               "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
                               "searchTags": [
@@ -2318,7 +2287,7 @@
                               "labelPosition": "Top",
                               "isDisabled": false,
                               "key": "qevt7zfe1l",
-                              "onDateSelected": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onDateSelected": "",
                               "labelTextSize": "1rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -2338,8 +2307,7 @@
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
-                              "closeOnSelection": false,
-                              "maxDate": "2022-12-26T00:00:00.000+07:00",
+                              "closeOnSelection": true,
                               "minDynamicHeight": 4
                             },
                             {
@@ -2347,9 +2315,6 @@
                               "widgetName": "add_employee_position",
                               "isFilterable": false,
                               "dynamicPropertyPathList": [
-                                {
-                                  "key": "onOptionChange"
-                                },
                                 {
                                   "key": "isVisible"
                                 }
@@ -2407,7 +2372,7 @@
                               "isLoading": false,
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
-                              "onOptionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onOptionChange": "",
                               "minDynamicHeight": 4
                             }
                           ],
@@ -2825,11 +2790,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "edit_employee_sex",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onSelectionChange"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Radio Group",
                               "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
                               "searchTags": [
@@ -2859,7 +2820,7 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "onSelectionChange": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onSelectionChange": "",
                               "options": [
                                 {
                                   "label": "ชาย",
@@ -2958,11 +2919,7 @@
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "edit_employee_email",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
@@ -3004,7 +2961,7 @@
                               "key": "sn0hkxemmx",
                               "labelTextSize": "1rem",
                               "isRequired": false,
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onTextChanged": "",
                               "isDeprecated": false,
                               "rightColumn": 62,
                               "dynamicHeight": "FIXED",
@@ -3055,11 +3012,7 @@
                               "regex": "\\D",
                               "borderRadius": "1.5rem",
                               "widgetName": "edit_employee_name",
-                              "dynamicPropertyPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
+                              "dynamicPropertyPathList": [],
                               "displayName": "Input",
                               "searchTags": [
                                 "form",
@@ -3080,7 +3033,7 @@
                               "labelPosition": "Top",
                               "key": "sn0hkxemmx",
                               "labelTextSize": "1rem",
-                              "onTextChanged": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onTextChanged": "",
                               "isDeprecated": false,
                               "rightColumn": 30,
                               "widgetId": "nd3w2zbckb",
@@ -3321,9 +3274,6 @@
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "defaultDate"
-                                },
-                                {
-                                  "key": "onDateSelected"
                                 }
                               ],
                               "displayName": "DatePicker",
@@ -3357,7 +3307,7 @@
                               "labelPosition": "Top",
                               "isDisabled": false,
                               "key": "qevt7zfe1l",
-                              "onDateSelected": "{{_.omit(table_employee.tableData[0], \"customColumn1\", \"__primaryKey__\")}}",
+                              "onDateSelected": "",
                               "labelTextSize": "1rem",
                               "isRequired": false,
                               "defaultDate": "{{table_employee.triggeredRow.dob}}",
