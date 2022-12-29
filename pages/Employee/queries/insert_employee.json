@@ -46,7 +46,7 @@
           "value": "eq.{{table_employee.triggeredRow.employee_id}}"
         }
       ],
-      "body": "{ \n\t\"employee_id\": \"{{add_employee_id.text}}\",\n  \"employee_name\": \"{{add_employee_name.text}}\",\n  \"email\": \"{{add_employee_email.text}}\",\n  \"division_id\": \"{{add_employee_division.selectedOptionValue}}\",\n  \"position\": \"{{add_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{add_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{add_employee_dob.formattedDate}}\",\n  \"sex\": \"{{add_employee_sex.selectedOptionValue}}\"\n}",
+      "body": "{ \n\t\"employee_id\": \"{{add_employee_id.text}}\",\n  \"employee_name\": \"{{add_employee_name.text}}\",\n  \"email\": \"{{add_employee_email.text}}\",\n  \"division_id\": \"{{add_employee_division.selectedOptionValue}}\",\n  \"position_id\": \"{{add_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{add_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{add_employee_dob.formattedDate}}\",\n  \"sex\": \"{{add_employee_sex.selectedOptionValue}}\"\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],

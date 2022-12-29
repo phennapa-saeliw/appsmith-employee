@@ -19,10 +19,6 @@
     {
       "id": "Sign up",
       "isDefault": false
-    },
-    {
-      "id": "Employee Copy",
-      "isDefault": false
     }
   ],
   "viewMode": false,

@@ -482,9 +482,6 @@
                           "key": "primaryColumns.email.computedValue"
                         },
                         {
-                          "key": "primaryColumns.division_id.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.position.computedValue"
                         },
                         {
@@ -513,6 +510,12 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.boxShadow"
+                        },
+                        {
+                          "key": "primaryColumns.position_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.division_id.computedValue"
                         }
                       ],
                       "leftColumn": 11,
@@ -559,14 +562,15 @@
                         "employee_id",
                         "employee_name",
                         "email",
-                        "division_id",
+                        "division",
                         "position",
                         "start_date",
                         "dob",
                         "sex",
                         "customColumn2",
                         "customColumn1",
-                        "division"
+                        "division_id",
+                        "position_id"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -592,12 +596,13 @@
                         "employee_name": 135,
                         "email": 131,
                         "division_id": 116,
-                        "position": 137,
+                        "position": 135,
                         "start_date": 97,
                         "dob": 97,
                         "sex": 60,
                         "customColumn1": 68,
-                        "customColumn2": 60
+                        "customColumn2": 60,
+                        "division": 109
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -714,16 +719,16 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "ฝ่าย",
+                          "label": "division",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"].division_name))}}",
+                          "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -891,16 +896,16 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "division",
+                          "label": "ฝ่าย",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"]))}}",
+                          "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"].division_name))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -937,6 +942,34 @@
                           "iconName": "annotation",
                           "buttonVariant": "TERTIARY",
                           "onClick": "{{storeValue('edit', table_employee.triggeredRow.employee_id);   showModal('edit_modal')}}"
+                        },
+                        "position_id": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "position_id",
+                          "id": "position_id",
+                          "alias": "position_id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "position",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"position\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "onRowSelected": "",
@@ -2875,7 +2908,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( default))(edit_employee_division.options, edit_employee_division.serverSideFiltering) }}",
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.triggeredRow.division_id.division_id))(edit_employee_division.options, edit_employee_division.serverSideFiltering) }}",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
                               "dynamicTriggerPathList": [
@@ -2889,9 +2922,6 @@
                                   "key": "accentColor"
                                 },
                                 {
-                                  "key": "placeholderText"
-                                },
-                                {
                                   "key": "options"
                                 },
                                 {
@@ -2899,8 +2929,8 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "{{get_division.data.map(up => ({ \"label\": up.division_name, \"value\": up.division_id.toString()})) }}",
-                              "placeholderText": "{{table_employee.triggeredRow.division_id}}",
+                              "options": "{{get_division.data.map(up => ({ \"label\": up.division_name, \"value\": up.division_id})) }}",
+                              "placeholderText": "",
                               "isDisabled": false,
                               "key": "ux9df07dm6",
                               "labelTextSize": "1rem",
@@ -3356,7 +3386,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.triggeredRow.position))(edit_employee_position.options, edit_employee_position.serverSideFiltering) }}",
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.triggeredRow.position_id.id))(edit_employee_position.options, edit_employee_position.serverSideFiltering) }}",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
                               "dynamicTriggerPathList": [
@@ -3373,9 +3403,6 @@
                                   "key": "options"
                                 },
                                 {
-                                  "key": "placeholderText"
-                                },
-                                {
                                   "key": "isVisible"
                                 },
                                 {
@@ -3383,8 +3410,8 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
-                              "placeholderText": "{{table_employee.triggeredRow.position}}",
+                              "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id})) }}",
+                              "placeholderText": "",
                               "isDisabled": false,
                               "key": "ux9df07dm6",
                               "labelTextSize": "1rem",
@@ -3495,7 +3522,9 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Employee_get_user",
               "name": "get_user",
