@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Employee",
+    "pageId": "Employee Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -52,7 +52,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -63,7 +63,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_get_department",
+  "id": "Employee Copy_get_department",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192d"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac74be647efb486b7736da"
 }

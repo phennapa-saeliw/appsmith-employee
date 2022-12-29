@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_department",
+    "name": "insert_employee",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Employee",
+    "pageId": "Employee Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/department",
+      "path": "/rest/v1/employee",
       "headers": [
         {
           "key": "apikey",
@@ -33,37 +33,56 @@
         {
           "key": "content-type",
           "value": "application/json"
+        },
+        {
+          "key": "Prefer",
+          "value": "return=minimal"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "select",
-          "value": "department_name"
-        },
-        {
-          "key": "order",
-          "value": "department_id.asc"
+          "key": "employee_id",
+          "value": "eq.{{table_employee.triggeredRow.employee_id}}"
         }
       ],
-      "httpMethod": "GET",
+      "body": "{ \n\t\"employee_id\": \"{{add_employee_id.text}}\",\n  \"employee_name\": \"{{add_employee_name.text}}\",\n  \"email\": \"{{add_employee_email.text}}\",\n  \"division_id\": \"{{add_employee_division.selectedOptionValue}}\",\n  \"position\": \"{{add_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{add_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{add_employee_dob.formattedDate}}\",\n  \"sex\": \"{{add_employee_sex.selectedOptionValue}}\"\n}",
+      "bodyFormData": [],
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "formData": {
         "apiContentType": "application/json"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      },
+      {
+        "key": "queryParameters[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "add_employee_division.selectedOptionValue",
+      "add_employee_dob.formattedDate",
+      "add_employee_email.text",
+      "add_employee_id.text",
+      "add_employee_name.text",
+      "add_employee_position.selectedOptionValue",
+      "add_employee_sex.selectedOptionValue",
+      "add_employee_start_date.formattedDate",
+      "table_employee.triggeredRow.employee_id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_get_department",
+  "id": "Employee Copy_insert_employee",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192d"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac74be647efb486b7736df"
 }

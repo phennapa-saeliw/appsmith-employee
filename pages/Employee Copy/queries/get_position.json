@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_department",
+    "name": "get_position",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Employee",
+    "pageId": "Employee Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/department",
+      "path": "/rest/v1/position",
       "headers": [
         {
           "key": "apikey",
@@ -39,11 +39,11 @@
       "queryParameters": [
         {
           "key": "select",
-          "value": "department_name"
+          "value": "*"
         },
         {
           "key": "order",
-          "value": "department_id.asc"
+          "value": "id.asc"
         }
       ],
       "httpMethod": "GET",
@@ -52,7 +52,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -63,7 +63,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_get_department",
+  "id": "Employee Copy_get_position",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192d"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac74be647efb486b7736d8"
 }

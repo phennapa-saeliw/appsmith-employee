@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_department",
+    "name": "get_user",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -16,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Employee",
+    "pageId": "Employee Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/department",
+      "path": "/auth/v1/user",
       "headers": [
         {
           "key": "apikey",
@@ -28,7 +28,7 @@
         },
         {
           "key": "Authorization",
-          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzY2Zzc2hjdXFvbXZ3Y3ZyeXllIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAzODk4NzAsImV4cCI6MTk4NTk2NTg3MH0.-QdV4dkKgRtGD295qBiD__dwUuBcTkqZz9lAEfWWYPM"
+          "value": "Bearer {{appsmith.store.access_token}}"
         },
         {
           "key": "content-type",
@@ -36,34 +36,31 @@
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [
-        {
-          "key": "select",
-          "value": "department_name"
-        },
-        {
-          "key": "order",
-          "value": "department_id.asc"
-        }
-      ],
+      "queryParameters": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "formData": {
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [
+      {
+        "key": "headers[1].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.access_token"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_get_department",
+  "id": "Employee Copy_get_user",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192d"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac74be647efb486b7736e1"
 }
