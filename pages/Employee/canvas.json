@@ -3371,6 +3371,9 @@
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "isVisible"
+                                },
+                                {
+                                  "key": "isDisabled"
                                 }
                               ],
                               "displayName": "Select",
@@ -3407,12 +3410,15 @@
                                 },
                                 {
                                   "key": "defaultOptionValue"
+                                },
+                                {
+                                  "key": "isDisabled"
                                 }
                               ],
                               "labelPosition": "Top",
                               "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id})) }}",
                               "placeholderText": "",
-                              "isDisabled": false,
+                              "isDisabled": "{{!!edit_employee_division.selectedOptionValue}}",
                               "key": "ux9df07dm6",
                               "labelTextSize": "1rem",
                               "isRequired": false,
