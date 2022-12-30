@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "error",
-    "fullyQualifiedName": "error.error",
+    "name": "add",
+    "fullyQualifiedName": "error.add",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sign up",
-    "collectionId": "Sign up_error",
+    "pageId": "Employee",
+    "collectionId": "Employee_error",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  try {\n    await sign_up.run();\n  } catch (e) {\n    showAlert(`${e.message}:${email_sign_up.inputText} this email is already registered.`, 'warning');\n  }\n}",
+      "body": "async () => {\n  try {\n    await insert_employee.run();\n  } catch (e) {\n    showAlert(`${e.message}: รหัสพนักงานซ้ำ Id ${add_employee_id.inputText}.`, 'warning');\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  try {\n    await sign_up.run();\n  } catch (e) {\n    showAlert(`${e.message}:${email_sign_up.inputText} this email is already registered.`, 'warning');\n  }\n}"
+      "async () => {\n  try {\n    await insert_employee.run();\n  } catch (e) {\n    showAlert(`${e.message}: รหัสพนักงานซ้ำ Id ${add_employee_id.inputText}.`, 'warning');\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sign up_error.error",
+  "id": "Employee_error.add",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63ae9933fcb7cc4992ae2cde"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ae9fb8fcb7cc4992ae2d4b"
 }

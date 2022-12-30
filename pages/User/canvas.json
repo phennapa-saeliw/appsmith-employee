@@ -57,7 +57,7 @@
                   "widgetName": "Canvas8Copy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 750,
+                  "bottomRow": 760,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -67,6 +67,85 @@
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
                   "children": [
+                    {
+                      "isCompact": false,
+                      "boxShadow": "none",
+                      "widgetName": "menu_button_user",
+                      "configureMenuItems": {
+                        "label": "Configure Menu Items",
+                        "id": "config",
+                        "config": {
+                          "id": "config",
+                          "label": "Menu Item",
+                          "isVisible": true,
+                          "isDisabled": false
+                        }
+                      },
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Menu Button",
+                      "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
+                      "topRow": 0,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "type": "MENU_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 19.5,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "menuItems.menuItem1.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem2.onClick"
+                        }
+                      ],
+                      "leftColumn": 49,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "label"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "sourceData": [],
+                      "key": "e1rt60e7re",
+                      "sourceDataKeys": [],
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "iconName": "user",
+                      "menuVariant": "TERTIARY",
+                      "widgetId": "2x7piwvhiq",
+                      "menuItems": {
+                        "menuItem1": {
+                          "label": "Profile",
+                          "id": "menuItem1",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 0,
+                          "onClick": "{{navigateTo('User', {}, 'SAME_WINDOW')}}"
+                        },
+                        "menuItem2": {
+                          "label": "Log out",
+                          "id": "menuItem2",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 1,
+                          "onClick": "{{log_out.Logout()}}"
+                        }
+                      },
+                      "isVisible": true,
+                      "label": "{{get_user.data.email}}",
+                      "version": 1,
+                      "parentId": "aqvskjd9li",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0.375rem",
+                      "menuItemsSource": "STATIC",
+                      "menuColor": "#231f20",
+                      "iconAlign": "right",
+                      "placement": "CENTER"
+                    },
                     {
                       "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                       "widgetName": "container_column",
@@ -389,74 +468,6 @@
                       "minDynamicHeight": 10
                     },
                     {
-                      "isCompact": false,
-                      "boxShadow": "none",
-                      "widgetName": "menu_button_user",
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Menu Button",
-                      "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
-                      "topRow": 0,
-                      "bottomRow": 5,
-                      "parentRowSpace": 10,
-                      "type": "MENU_BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "menuItems.menuItem1.onClick"
-                        },
-                        {
-                          "key": "menuItems.menuItem2.onClick"
-                        }
-                      ],
-                      "leftColumn": 51,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "label"
-                        }
-                      ],
-                      "isDisabled": false,
-                      "key": "e1rt60e7re",
-                      "sourceDataKeys": [],
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "iconName": "user",
-                      "menuVariant": "SECONDARY",
-                      "widgetId": "rkw5h6rtru",
-                      "menuItems": {
-                        "menuItem1": {
-                          "label": "Profile",
-                          "id": "menuItem1",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 0,
-                          "onClick": "{{navigateTo('User', {}, 'SAME_WINDOW')}}"
-                        },
-                        "menuItem2": {
-                          "label": "Log out",
-                          "id": "menuItem2",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 1,
-                          "onClick": "{{log_out.Logout()}}"
-                        }
-                      },
-                      "isVisible": true,
-                      "label": "{{get_user.data.email}}",
-                      "version": 1,
-                      "parentId": "aqvskjd9li",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "1.5rem",
-                      "menuItemsSource": "STATIC",
-                      "menuColor": "#231f20",
-                      "iconAlign": "right",
-                      "placement": "CENTER"
-                    },
-                    {
                       "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                       "widgetName": "container_bg",
                       "borderColor": "#FFFFF9",
@@ -468,8 +479,8 @@
                         "parent",
                         "group"
                       ],
-                      "topRow": 9,
-                      "bottomRow": 69,
+                      "topRow": 14,
+                      "bottomRow": 74,
                       "parentRowSpace": 10,
                       "type": "CONTAINER_WIDGET",
                       "hideCard": false,

@@ -39,11 +39,15 @@
       "queryParameters": [
         {
           "key": "select",
-          "value": "*"
+          "value": "*,division(division_id,division_name)"
         },
         {
           "key": "order",
           "value": "id.asc"
+        },
+        {
+          "key": "division_id",
+          "value": "eq.{{add_employee_division.selectedOptionValue}}"
         }
       ],
       "httpMethod": "GET",
@@ -56,12 +60,17 @@
     "dynamicBindingPathList": [
       {
         "key": "path"
+      },
+      {
+        "key": "queryParameters[2].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "add_employee_division.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

@@ -795,7 +795,7 @@
                           "key": "menuItems.menuItem2.onClick"
                         }
                       ],
-                      "leftColumn": 51,
+                      "leftColumn": 49,
                       "dynamicBindingPathList": [
                         {
                           "key": "label"
@@ -1868,6 +1868,16 @@
           ],
           [
             {
+              "id": "Home_dash_employee",
+              "name": "dash_employee",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Home_get_user",
               "name": "get_user",
               "confirmBeforeExecute": false,
@@ -1875,16 +1885,6 @@
               "jsonPathKeys": [
                 "appsmith.store.access_token"
               ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Home_dash_employee",
-              "name": "dash_employee",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

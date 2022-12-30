@@ -68,6 +68,85 @@
                   "dynamicBindingPathList": [],
                   "children": [
                     {
+                      "isCompact": false,
+                      "boxShadow": "none",
+                      "widgetName": "menu_button_user",
+                      "configureMenuItems": {
+                        "label": "Configure Menu Items",
+                        "id": "config",
+                        "config": {
+                          "id": "config",
+                          "label": "Menu Item",
+                          "isVisible": true,
+                          "isDisabled": false
+                        }
+                      },
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Menu Button",
+                      "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
+                      "topRow": 0,
+                      "bottomRow": 5,
+                      "parentRowSpace": 10,
+                      "type": "MENU_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 19.5,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "menuItems.menuItem1.onClick"
+                        },
+                        {
+                          "key": "menuItems.menuItem2.onClick"
+                        }
+                      ],
+                      "leftColumn": 49,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "label"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "sourceData": [],
+                      "key": "e1rt60e7re",
+                      "sourceDataKeys": [],
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "iconName": "user",
+                      "menuVariant": "TERTIARY",
+                      "widgetId": "ast55qji2k",
+                      "menuItems": {
+                        "menuItem1": {
+                          "label": "Profile",
+                          "id": "menuItem1",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 0,
+                          "onClick": "{{navigateTo('User', {}, 'SAME_WINDOW')}}"
+                        },
+                        "menuItem2": {
+                          "label": "Log out",
+                          "id": "menuItem2",
+                          "widgetId": "",
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "index": 1,
+                          "onClick": "{{log_out.Logout()}}"
+                        }
+                      },
+                      "isVisible": true,
+                      "label": "{{get_user.data.email}}",
+                      "version": 1,
+                      "parentId": "aqvskjd9li",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0.375rem",
+                      "menuItemsSource": "STATIC",
+                      "menuColor": "#231f20",
+                      "iconAlign": "right",
+                      "placement": "CENTER"
+                    },
+                    {
                       "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                       "widgetName": "container_column",
                       "borderColor": "#FFFFF9",
@@ -386,73 +465,6 @@
                       "borderRadius": "0px",
                       "maxDynamicHeight": 9000,
                       "minDynamicHeight": 10
-                    },
-                    {
-                      "isCompact": false,
-                      "boxShadow": "none",
-                      "widgetName": "menu_button_user",
-                      "displayName": "Menu Button",
-                      "iconSVG": "/static/media/icon.0341d17d67020c8bfc560cc5928af2a7.svg",
-                      "topRow": 0,
-                      "bottomRow": 4,
-                      "parentRowSpace": 10,
-                      "type": "MENU_BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "menuItems.menuItem1.onClick"
-                        },
-                        {
-                          "key": "menuItems.menuItem2.onClick"
-                        }
-                      ],
-                      "leftColumn": 51,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "label"
-                        }
-                      ],
-                      "isDisabled": false,
-                      "key": "e1rt60e7re",
-                      "sourceDataKeys": [],
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "iconName": "user",
-                      "menuVariant": "TERTIARY",
-                      "widgetId": "rkw5h6rtru",
-                      "menuItems": {
-                        "menuItem1": {
-                          "label": "Profile",
-                          "id": "menuItem1",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 0,
-                          "onClick": "{{navigateTo('User', {}, 'SAME_WINDOW')}}"
-                        },
-                        "menuItem2": {
-                          "label": "Log out",
-                          "id": "menuItem2",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 1,
-                          "onClick": "{{log_out.Logout()}}"
-                        }
-                      },
-                      "isVisible": true,
-                      "label": "{{get_user.data.email}}",
-                      "version": 1,
-                      "parentId": "aqvskjd9li",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "1.5rem",
-                      "menuItemsSource": "STATIC",
-                      "menuColor": "#231f20",
-                      "iconAlign": "right",
-                      "placement": "CENTER"
                     },
                     {
                       "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
@@ -1876,7 +1888,7 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()})) }}",
+                              "options": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()}))\n}}",
                               "placeholderText": "+ Add Division",
                               "isDisabled": false,
                               "key": "ux9df07dm6",
@@ -1895,7 +1907,7 @@
                               "isLoading": false,
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
-                              "onOptionChange": "",
+                              "onOptionChange": "{{get_position.run()}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -2076,7 +2088,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_add",
-                              "onClick": "{{insert_employee.run();\nget_employee.run();\ncloseModal('insert_Modal'); \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error')\n}}",
+                              "onClick": "{{ error.add() ;\nget_employee.run();\ncloseModal('insert_Modal'); \n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -2129,8 +2141,13 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "cancel_add",
-                              "onClick": "{{closeModal('insert_Modal')}}",
+                              "onClick": "{{closeModal('insert_Modal')\nclearStore()}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -2389,7 +2406,7 @@
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "{{get_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) }}",
+                              "options": "{{\nget_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) \n}}",
                               "placeholderText": "+ Add Position",
                               "isDisabled": false,
                               "key": "ux9df07dm6",
@@ -2894,7 +2911,11 @@
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "edit_employee_division",
                               "isFilterable": false,
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
                               "labelText": "ฝ่ายงาน",
@@ -2949,7 +2970,7 @@
                               "isLoading": false,
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
-                              "onOptionChange": "",
+                              "onOptionChange": "{{get_position.run()}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -3371,6 +3392,9 @@
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "isVisible"
+                                },
+                                {
+                                  "key": "onOptionChange"
                                 }
                               ],
                               "displayName": "Select",
@@ -3403,10 +3427,10 @@
                                   "key": "options"
                                 },
                                 {
-                                  "key": "defaultOptionValue"
+                                  "key": "isVisible"
                                 },
                                 {
-                                  "key": "isVisible"
+                                  "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Top",
@@ -3514,17 +3538,19 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Employee_get_position",
               "name": "get_position",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "add_employee_division.selectedOptionValue"
+              ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Employee_get_user",
               "name": "get_user",
