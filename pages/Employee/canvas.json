@@ -2088,7 +2088,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_add",
-                              "onClick": "{{ error.add() ;\nget_employee.run();\ncloseModal('insert_Modal'); \n}}",
+                              "onClick": "{{ error.add() ;\nget_employee.run();\nclearStore();\ncloseModal('insert_Modal'); \n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -3160,7 +3160,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_edit",
-                              "onClick": "{{update_employee.run();\nget_employee.run();\n(error) => showAlert(`Error while updating resource!\\n ${error}`,'error')\ncloseModal('edit_modal')}}",
+                              "onClick": "{{update_employee.run();\nget_employee.run();\n(error) => showAlert(`Error while updating resource!\\n ${error}`,'error')\nclearStore();\ncloseModal('edit_modal')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
