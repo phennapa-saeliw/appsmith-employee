@@ -341,13 +341,9 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "bt_submit_sign_up",
-                      "onClick": "{{sign_up.run(() => {\n\tif (showAlert('Email Successful Registration', 'success')) ;\n\t\t\telse if(\t\tshowAlert('This email is already registered.!\\n ','error'))\n\tnavigateTo('Login');\n})}}",
+                      "onClick": "{{sign_up.run(() => {\n\tshowAlert('Email Successful Registration', 'success') ;\n\tnavigateTo('Login');\n}, () => error.error())}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
