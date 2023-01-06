@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 71,
+          "version": 74,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -1868,16 +1868,6 @@
           ],
           [
             {
-              "id": "Home_dash_employee",
-              "name": "dash_employee",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Home_get_user",
               "name": "get_user",
               "confirmBeforeExecute": false,
@@ -1885,6 +1875,16 @@
               "jsonPathKeys": [
                 "appsmith.store.access_token"
               ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_dash_employee",
+              "name": "dash_employee",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

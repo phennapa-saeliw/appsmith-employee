@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 71,
+          "version": 74,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -229,7 +229,7 @@
                                 "label"
                               ],
                               "topRow": 2,
-                              "bottomRow": 9,
+                              "bottomRow": 6,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -3538,6 +3538,16 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Employee_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.access_token"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -3548,16 +3558,6 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "add_employee_division.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Employee_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
               ],
               "timeoutInMillisecond": 10000
             }
