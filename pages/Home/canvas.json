@@ -1858,6 +1858,14 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Home_get_division",
+              "name": "get_division",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Home_get_employee",
               "name": "get_employee",
               "confirmBeforeExecute": false,

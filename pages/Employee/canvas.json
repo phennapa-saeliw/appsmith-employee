@@ -3527,6 +3527,22 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Employee_get_department",
+              "name": "get_department",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Employee_get_division",
+              "name": "get_division",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Employee_get_employee",
               "name": "get_employee",
               "confirmBeforeExecute": false,
@@ -3536,6 +3552,16 @@
             }
           ],
           [
+            {
+              "id": "Employee_get_position",
+              "name": "get_position",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "add_employee_division.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Employee_get_user",
               "name": "get_user",
