@@ -3553,16 +3553,6 @@
           ],
           [
             {
-              "id": "Employee_get_position",
-              "name": "get_position",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "add_employee_division.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Employee_get_user",
               "name": "get_user",
               "confirmBeforeExecute": false,
