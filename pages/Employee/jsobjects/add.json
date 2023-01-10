@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "add",
+    "pageId": "Employee",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tadd: async () => {\n\t\ttry {\n\t\t\tawait insert_employee.data.run();\n\t\t} catch (e) {\n\t\t\tshowAlert(' เพิ่มพนักงานสำเร็จจ้า', 'success') ;\n\t\t}\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Employee_add",
+  "deleted": false,
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63bbe5522f7c716d97bfe104"
+}
