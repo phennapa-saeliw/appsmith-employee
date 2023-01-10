@@ -1758,7 +1758,7 @@
                                   "key": "onSelectionChange"
                                 }
                               ],
-                              "leftColumn": 33,
+                              "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1782,7 +1782,7 @@
                               "labelTextSize": "1rem",
                               "isRequired": true,
                               "isDeprecated": false,
-                              "rightColumn": 62,
+                              "rightColumn": 30,
                               "dynamicHeight": "AUTO_HEIGHT",
                               "widgetId": "40m8tw2612",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1826,7 +1826,7 @@
                                   "key": "onOptionChange"
                                 }
                               ],
-                              "leftColumn": 33,
+                              "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1843,7 +1843,7 @@
                               "labelTextSize": "1rem",
                               "isRequired": true,
                               "isDeprecated": false,
-                              "rightColumn": 62,
+                              "rightColumn": 30,
                               "dynamicHeight": "FIXED",
                               "widgetId": "2zzoho8iyj",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1870,8 +1870,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 15,
-                              "bottomRow": 22,
+                              "topRow": 6,
+                              "bottomRow": 13,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -1885,7 +1885,7 @@
                                 }
                               ],
                               "resetOnSubmit": true,
-                              "leftColumn": 1,
+                              "leftColumn": 33,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1902,7 +1902,7 @@
                               "isRequired": true,
                               "onTextChanged": "",
                               "isDeprecated": false,
-                              "rightColumn": 30,
+                              "rightColumn": 62,
                               "dynamicHeight": "FIXED",
                               "widgetId": "71i3slepac",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1927,7 +1927,7 @@
                               "type": "INPUT_WIDGET_V2",
                               "animateLoading": true,
                               "resetOnSubmit": true,
-                              "leftColumn": 33,
+                              "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1971,7 +1971,7 @@
                               "labelTextSize": "1rem",
                               "onTextChanged": "",
                               "isDeprecated": false,
-                              "rightColumn": 62,
+                              "rightColumn": 30,
                               "widgetId": "glnaw4tfqk",
                               "label": "ชื่อพนักงาน",
                               "parentId": "qraedk4bov",
@@ -2131,77 +2131,72 @@
                               "parentId": "qraedk4bov",
                               "renderMode": "CANVAS",
                               "isLoading": false,
+                              "originalTopRow": 42,
                               "disabledWhenInvalid": false,
                               "borderRadius": "1.5rem",
+                              "originalBottomRow": 46,
                               "buttonVariant": "SECONDARY",
                               "placement": "CENTER"
                             },
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "topRow": 6,
-                              "tooltip": "just numbers 0-9",
+                              "widgetName": "add_employee_start_date",
+                              "dateFormat": "YYYY-MM-DD",
+                              "dynamicPropertyPathList": [],
+                              "displayName": "DatePicker",
+                              "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
+                              "searchTags": [
+                                "calendar"
+                              ],
+                              "topRow": 24,
+                              "bottomRow": 31,
+                              "shortcuts": false,
+                              "parentRowSpace": 10,
                               "labelWidth": 5,
-                              "type": "INPUT_WIDGET_V2",
+                              "type": "DATE_PICKER_WIDGET2",
+                              "hideCard": false,
                               "animateLoading": true,
-                              "resetOnSubmit": true,
+                              "parentColumnSpace": 6.9375,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onDateSelected"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
                                 }
                               ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "4",
-                              "placeholderText": "+ Add Employee Id ",
-                              "isDisabled": false,
-                              "isRequired": false,
-                              "dynamicHeight": "FIXED",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "version": 2,
-                              "isLoading": false,
-                              "regex": "\\d",
-                              "borderRadius": "1.5rem",
-                              "widgetName": "add_employee_id",
-                              "dynamicPropertyPathList": [],
-                              "displayName": "Input",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "bottomRow": 13,
-                              "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "hideCard": false,
-                              "parentColumnSpace": 6.625,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onTextChanged"
-                                }
-                              ],
                               "labelPosition": "Top",
-                              "key": "sn0hkxemmx",
+                              "isDisabled": false,
+                              "key": "qevt7zfe1l",
+                              "onDateSelected": "",
                               "labelTextSize": "1rem",
-                              "onTextChanged": "",
+                              "isRequired": true,
                               "isDeprecated": false,
                               "rightColumn": 30,
-                              "widgetId": "l14gzzmlnw",
-                              "label": "รหัสพนักงาน",
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "400v2zjczj",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "datePickerType": "DATE_PICKER",
+                              "label": "วันที่เริ่มทำงาน",
+                              "version": 2,
                               "parentId": "qraedk4bov",
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "timePrecision": "None",
+                              "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
+                              "firstDayOfWeek": 0,
+                              "closeOnSelection": true,
                               "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                              "widgetName": "add_employee_start_date",
+                              "widgetName": "add_employee_dob",
                               "dateFormat": "YYYY-MM-DD",
                               "dynamicPropertyPathList": [],
                               "displayName": "DatePicker",
@@ -2238,62 +2233,6 @@
                               "isDeprecated": false,
                               "rightColumn": 62,
                               "dynamicHeight": "FIXED",
-                              "widgetId": "400v2zjczj",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "datePickerType": "DATE_PICKER",
-                              "label": "วันที่เริ่มทำงาน",
-                              "version": 2,
-                              "parentId": "qraedk4bov",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "timePrecision": "None",
-                              "borderRadius": "1.5rem",
-                              "maxDynamicHeight": 9000,
-                              "firstDayOfWeek": 0,
-                              "closeOnSelection": true,
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                              "widgetName": "add_employee_dob",
-                              "dateFormat": "YYYY-MM-DD",
-                              "dynamicPropertyPathList": [],
-                              "displayName": "DatePicker",
-                              "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
-                              "searchTags": [
-                                "calendar"
-                              ],
-                              "topRow": 33,
-                              "bottomRow": 40,
-                              "shortcuts": false,
-                              "parentRowSpace": 10,
-                              "labelWidth": 5,
-                              "type": "DATE_PICKER_WIDGET2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 6.9375,
-                              "dynamicTriggerPathList": [
-                                {
-                                  "key": "onDateSelected"
-                                }
-                              ],
-                              "leftColumn": 1,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                }
-                              ],
-                              "labelPosition": "Top",
-                              "isDisabled": false,
-                              "key": "qevt7zfe1l",
-                              "onDateSelected": "",
-                              "labelTextSize": "1rem",
-                              "isRequired": true,
-                              "isDeprecated": false,
-                              "rightColumn": 30,
-                              "dynamicHeight": "FIXED",
                               "widgetId": "ohdmk4cwgs",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -2326,8 +2265,8 @@
                               "searchTags": [
                                 "dropdown"
                               ],
-                              "topRow": 24,
-                              "bottomRow": 31,
+                              "topRow": 15,
+                              "bottomRow": 22,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "type": "SELECT_WIDGET",
@@ -2341,7 +2280,7 @@
                                   "key": "onOptionChange"
                                 }
                               ],
-                              "leftColumn": 1,
+                              "leftColumn": 33,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -2361,7 +2300,7 @@
                               "labelTextSize": "1rem",
                               "isRequired": true,
                               "isDeprecated": false,
-                              "rightColumn": 30,
+                              "rightColumn": 62,
                               "dynamicHeight": "FIXED",
                               "widgetId": "urn5zswsvs",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
