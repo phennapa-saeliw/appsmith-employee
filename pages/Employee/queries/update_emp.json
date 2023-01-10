@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "insert_employee",
+    "name": "update_emp",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "https://dscfsshcuqomvwcvryye.supabase.co"
       },
       "invalids": [],
@@ -44,12 +43,11 @@
       "queryParameters": [
         {
           "key": "employee_id",
-          "value": "eq.{{table_employee.triggeredRow.employee_id}}"
+          "value": "eq.{{appsmith.store.edit}}"
         }
       ],
-      "body": "{ \n\t\"employee_id\": \"{{add_employee_id.text}}\",\n  \"employee_name\": \"{{add_employee_name.text}}\",\n  \"email\": \"{{add_employee_email.text}}\",\n  \"division_id\": \"{{add_employee_division.selectedOptionValue}}\",\n  \"position_id\": \"{{add_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{add_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{add_employee_dob.formattedDate}}\",\n  \"sex\": \"{{add_employee_sex.selectedOptionValue}}\"\n}",
-      "bodyFormData": [],
-      "httpMethod": "POST",
+      "body": "{ \n  \"employee_name\": \"{{edit_employee_name.text}}\",\n  \"email\": \"{{edit_employee_email.text}}\",\n  \"division_id\": \"{{edit_employee_division.selectedOptionValue}}\",\n  \"position_id\": \"{{edit_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{edit_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{edit_employee_dob.formattedDate}}\",\n  \"sex\": \"{{edit_employee_sex.selectedOptionValue}}\"\n}",
+      "httpMethod": "PATCH",
       "selfReferencingDataPaths": [],
       "formData": {
         "apiContentType": "application/json"
@@ -68,22 +66,21 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "add_employee_division.selectedOptionValue",
-      "add_employee_dob.formattedDate",
-      "add_employee_email.text",
-      "add_employee_id.text",
-      "add_employee_name.text",
-      "add_employee_position.selectedOptionValue",
-      "add_employee_sex.selectedOptionValue",
-      "add_employee_start_date.formattedDate",
-      "table_employee.triggeredRow.employee_id"
+      "appsmith.store.edit",
+      "edit_employee_division.selectedOptionValue",
+      "edit_employee_dob.formattedDate",
+      "edit_employee_email.text",
+      "edit_employee_name.text",
+      "edit_employee_position.selectedOptionValue",
+      "edit_employee_sex.selectedOptionValue",
+      "edit_employee_start_date.formattedDate"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_insert_employee",
+  "id": "Employee_update_emp",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192c"
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63bd21932f7c716d97bfe130"
 }

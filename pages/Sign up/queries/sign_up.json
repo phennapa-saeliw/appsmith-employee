@@ -29,6 +29,11 @@
       "body": "{\n  \"email\": \"{{email_sign_up.text}}\",\n  \"password\": \"{{password_sign_up.text}}\"\n}",
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ],
       "formData": {
         "apiContentType": "application/json"
       }

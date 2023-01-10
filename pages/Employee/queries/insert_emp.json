@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "delete_employee",
+    "name": "insert_emp",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "https://dscfsshcuqomvwcvryye.supabase.co"
       },
       "invalids": [],
@@ -34,17 +33,21 @@
         {
           "key": "content-type",
           "value": "application/json"
+        },
+        {
+          "key": "Prefer",
+          "value": "return=minimal"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
           "key": "employee_id",
-          "value": "eq.{{appsmith.store.delete}}"
+          "value": "eq.{{table_employee.triggeredRow.employee_id}}"
         }
       ],
-      "body": "",
-      "httpMethod": "DELETE",
+      "body": "{ \n  \"employee_name\": \"{{add_employee_name.text}}\",\n  \"email\": \"{{add_employee_email.text}}\",\n  \"division_id\": \"{{add_employee_division.selectedOptionValue}}\",\n  \"position_id\": \"{{add_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{add_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{add_employee_dob.formattedDate}}\",\n  \"sex\": \"{{add_employee_sex.selectedOptionValue}}\"\n}",
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "formData": {
         "apiContentType": "application/json"
@@ -53,6 +56,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "body"
+      },
+      {
         "key": "queryParameters[0].value"
       }
     ],
@@ -60,14 +66,21 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.delete"
+      "add_employee_division.selectedOptionValue",
+      "add_employee_dob.formattedDate",
+      "add_employee_email.text",
+      "add_employee_name.text",
+      "add_employee_position.selectedOptionValue",
+      "add_employee_sex.selectedOptionValue",
+      "add_employee_start_date.formattedDate",
+      "table_employee.triggeredRow.employee_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_delete_employee",
+  "id": "Employee_insert_emp",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2e86a0d0c01bfb0192a"
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63bd20472f7c716d97bfe12e"
 }

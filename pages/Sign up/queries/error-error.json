@@ -37,7 +37,7 @@
     "jsonPathKeys": [
       "async () => {\n  try {\n    await sign_up.run();\n  } catch (e) {\n    showAlert(`  ${email_sign_up.inputText}  : อีเมลนี้ลงทะเบียนแล้ว.`, 'warning');\n  }\n}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
