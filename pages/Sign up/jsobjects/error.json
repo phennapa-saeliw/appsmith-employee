@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n   error: async () => {\n             \n                        try{ \n                                    await sign_up.run() ;\n                                                        \n                                                                               \n                                    } catch (error) {\n                                                                                    showAlert('User already registered', 'error')\n                                                                             }\n                        }\n    }\n",
+    "body": "export default {\n   error: async () => {\n             \n                        try{ \n                                    await sign_up.run() ;\n                                    showAlert(' อีเมลลงทะเบียนสำเร็จ', 'success') ;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnavigateTo('Login');\n                                                                               \n                                    } catch (error) {\n                                                                                    showAlert('User already registered', 'error')\n                                                                             }\n                        }\n    }\n",
     "variables": [],
     "userPermissions": []
   },
