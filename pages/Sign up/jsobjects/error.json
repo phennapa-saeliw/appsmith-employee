@@ -6,11 +6,11 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\terror: async () => {\n\t\ttry {\n\t\t\tawait sign_up.run();\n\t\t} catch (e) {\n\t\t\tshowAlert(`  ${email_sign_up.inputText}  : อีเมลนี้ลงทะเบียนแล้ว.` ,'warning' )\n\t\t}\n\t}\n}",
+    "body": "export default {\n   error: async () => {\n             \n                        try{ \n                                    await sign_up.run() ;\n                                                        \n                                                                               \n                                    } catch (error) {\n                                                                                    showAlert('User already registered', 'error')\n                                                                             }\n                        }\n    }\n",
     "variables": [],
     "userPermissions": []
   },
   "id": "Sign up_error",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63ae9933fcb7cc4992ae2ce2"
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63be80d82f7c716d97bfe191"
 }
