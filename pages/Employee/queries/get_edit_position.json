@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "update_emp",
+    "name": "get_edit_position",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/employee",
+      "path": "/rest/v1/position",
       "headers": [
         {
           "key": "apikey",
@@ -33,21 +33,24 @@
         {
           "key": "content-type",
           "value": "application/json"
-        },
-        {
-          "key": "Prefer",
-          "value": "return=minimal"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "employee_id",
-          "value": "eq.{{appsmith.store.edit}}"
+          "key": "select",
+          "value": "*,division(division_id,division_name)"
+        },
+        {
+          "key": "order",
+          "value": "id.asc"
+        },
+        {
+          "key": "division_id",
+          "value": "eq.{{edit_employee_division.selectedOptionValue}}"
         }
       ],
-      "body": "{ \n  \"employee_name\": \"{{edit_employee_name.text}}\",\n  \"email\": \"{{edit_employee_email.text}}\",\n  \"division_id\": \"{{edit_employee_division.selectedOptionValue}}\",\n  \"position_id\": \"{{edit_employee_position.selectedOptionValue}}\",\n  \"start_date\": \"{{edit_employee_start_date.formattedDate}}\",\n  \"dob\": \"{{edit_employee_dob.formattedDate}}\",\n  \"sex\": \"{{edit_employee_sex.selectedOptionValue}}\"\n}",
-      "httpMethod": "PATCH",
+      "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "formData": {
         "apiContentType": "application/json"
@@ -56,31 +59,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "body"
-      },
-      {
-        "key": "queryParameters[0].value"
+        "key": "queryParameters[2].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.edit",
-      "edit_employee_division.selectedOptionValue",
-      "edit_employee_dob.formattedDate",
-      "edit_employee_email.text",
-      "edit_employee_name.text",
-      "edit_employee_position.selectedOptionValue",
-      "edit_employee_sex.selectedOptionValue",
-      "edit_employee_start_date.formattedDate"
+      "edit_employee_division.selectedOptionValue"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Employee_update_emp",
+  "id": "Employee_get_edit_position",
   "deleted": false,
-  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63be6ade2f7c716d97bfe180"
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63be22a92f7c716d97bfe143"
 }

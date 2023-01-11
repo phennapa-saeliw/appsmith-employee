@@ -898,7 +898,7 @@
                           "customAlias": "",
                           "iconName": "annotation",
                           "buttonVariant": "TERTIARY",
-                          "onClick": "{{storeValue('edit', table_employee.triggeredRow.employee_id);   \nclearStore();\nshowModal('edit_modal')}}"
+                          "onClick": "{{storeValue('edit', table_employee.triggeredRow.employee_id);  \nget_edit_position.run();\nshowModal('edit_modal')}}"
                         },
                         "position_id": {
                           "allowCellWrapping": false,
@@ -1000,6 +1000,7 @@
                       "disabledWhenInvalid": false,
                       "borderRadius": "0.7rem",
                       "buttonVariant": "TERTIARY",
+                      "iconAlign": "left",
                       "placement": "CENTER"
                     }
                   ],
@@ -2677,13 +2678,13 @@
                   "widgetName": "Canvas11",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 500,
+                  "bottomRow": 510,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 488,
+                  "minHeight": 496,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -2699,7 +2700,7 @@
                         "group"
                       ],
                       "topRow": 0,
-                      "bottomRow": 48,
+                      "bottomRow": 49,
                       "parentRowSpace": 10,
                       "type": "FORM_WIDGET",
                       "hideCard": false,
@@ -2714,12 +2715,12 @@
                           "widgetName": "Canvas10Copy",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 480,
+                          "bottomRow": 490,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 480,
+                          "minHeight": 490,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [],
@@ -2850,7 +2851,7 @@
                               "isLoading": false,
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
-                              "onOptionChange": "{{get_position.run()}}",
+                              "onOptionChange": "{{get_edit_position.run(() => {}, () => {})}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -3082,10 +3083,10 @@
                               "parentId": "azkmj8jdyh",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 45,
+                              "originalTopRow": 101,
                               "disabledWhenInvalid": true,
                               "borderRadius": "1.5rem",
-                              "originalBottomRow": 49,
+                              "originalBottomRow": 105,
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
@@ -3093,7 +3094,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "cancel_edit",
-                              "onClick": "{{closeModal('edit_modal')\nclearStore();\n}}",
+                              "onClick": "{{clearStore();\ncloseModal('edit_modal')\n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -3292,7 +3293,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.triggeredRow.position_id.id))(edit_employee_position.options, edit_employee_position.serverSideFiltering) }}",
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( table_employee.triggeredRow.position_id.id.toString()))(edit_employee_position.options, edit_employee_position.serverSideFiltering) }}",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
                               "dynamicTriggerPathList": [
@@ -3306,17 +3307,17 @@
                                   "key": "accentColor"
                                 },
                                 {
-                                  "key": "options"
+                                  "key": "isVisible"
                                 },
                                 {
-                                  "key": "isVisible"
+                                  "key": "options"
                                 },
                                 {
                                   "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "{{\nget_position.data.map(edit => ({ 'label': edit.name, 'value': edit.id})) \n}}",
+                              "options": "{{\nget_edit_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()}));\n}}",
                               "placeholderText": "",
                               "isDisabled": false,
                               "key": "ux9df07dm6",
@@ -3336,6 +3337,115 @@
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
                               "onOptionChange": "",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "widgetName": "Text9",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label"
+                              ],
+                              "topRow": 34,
+                              "bottomRow": 38,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 9.15625,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 33,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "",
+                              "key": "n20s9jymqg",
+                              "isDeprecated": false,
+                              "rightColumn": 62,
+                              "textAlign": "LEFT",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "itqjdbh2ws",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "azkmj8jdyh",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "originalTopRow": 34,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 97,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "widgetName": "Text10",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 9.15625,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 41,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "text"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "{{appsmith.store.edit}}",
+                              "key": "n20s9jymqg",
+                              "isDeprecated": false,
+                              "rightColumn": 57,
+                              "textAlign": "LEFT",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "vovxa0ypke",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "azkmj8jdyh",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1rem",
                               "minDynamicHeight": 4
                             }
                           ],
@@ -3382,7 +3492,7 @@
                 }
               ],
               "key": "dqm0uw2siu",
-              "height": 488,
+              "height": 496,
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
