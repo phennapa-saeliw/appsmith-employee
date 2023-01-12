@@ -97,9 +97,12 @@
                         },
                         {
                           "key": "fontFamily"
+                        },
+                        {
+                          "key": "customFusionChartConfig"
                         }
                       ],
-                      "customFusionChartConfig": "{\n  \"type\": \"bar2d\",\n  \"dataSource\": {\n    \"data\": [\n      {\n        \"label\": \"ฝ่ายต้อนรับ\",\n        \"value\": 5\n      },\n      {\n        \"label\": \"ฝ่ายบริการ\",\n        \"value\": 3 \n      },\n      {\n        \"label\": \"ฝ่ายทำความสะอาด\",\n        \"value\": 8\n      },\n      {\n        \"label\": \"ฝ่ายห้องผ้า\",\n        \"value\": 4\n      },\n      {\n        \"label\": \"ฝ่ายอาหารและเครื่องดื่มตลาด\",\n        \"value\": 4\n      },\n      {\n        \"label\": \"ฝ่ายกุ๊ก\",\n        \"value\": 6\n      },\n      {\n        \"label\": \"ฝ่ายดูแลห้องครัว\",\n        \"value\": 3\n      },\n      {\n        \"label\": \"ฝ่ายบัญชีทั่วไป\",\n        \"value\": 5\n      },\n      {\n        \"label\": \"ฝ่ายบัญชีต้นทุน\",\n        \"value\": 4\n      },\n      {\n        \"label\": \"ฝ่ายขายและการตลาด\",\n        \"value\": 3\n      }\n    ],\n    \"chart\": {\n      \"caption\": \"Division\",\n      \"theme\": \"fusion\",\n      \"alignCaptionWithCanvas\": 1,\n      \"captionFontSize\": \"24\",\n      \"captionAlignment\": \"center\",\n      \"captionPadding\": \"20\",\n      \"captionFontColor\": \"#231F20\",\n      \"legendIconSides\": \"4\",\n      \"legendIconBgAlpha\": \"100\",\n      \"legendIconAlpha\": \"100\",\n      \"legendPosition\": \"top\",\n      \"canvasPadding\": \"0\",\n      \"chartLeftMargin\": \"20\",\n      \"chartTopMargin\": \"10\",\n      \"chartRightMargin\": \"40\",\n      \"chartBottomMargin\": \"10\",\n      \"xAxisNameFontSize\": \"14\",\n      \"labelFontSize\": \"12\",\n      \"labelFontColor\": \"#716e6e\",\n      \"xAxisNameFontColor\": \"#716e6e\",\n      \"yAxisNameFontSize\": \"14\",\n      \"yAxisValueFontSize\": \"12\",\n      \"yAxisValueFontColor\": \"#716e6e\",\n      \"yAxisNameFontColor\": \"#716e6e\"\n    }\n  }\n}",
+                      "customFusionChartConfig": "{\n  \"type\": \"bar2d\",\n  \"dataSource\": {\n    \"data\": [\n      {\n        \"label\": \"ฝ่ายต้อนรับ\",\n        \"value\": {{dash_division_id1.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายบริการ\",\n        \"value\": {{dash_division_id2.data[0].count}} \n      },\n      {\n        \"label\": \"ฝ่ายทำความสะอาด\",\n        \"value\": {{dash_division_id3.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายห้องผ้า\",\n        \"value\": {{dash_division_id4.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายอาหารและเครื่องดื่มตลาด\",\n        \"value\": {{dash_division_id5.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายกุ๊ก\",\n        \"value\": {{dash_division_id6.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายดูแลห้องครัว\",\n        \"value\": {{dash_division_id7.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายบัญชีทั่วไป\",\n        \"value\": {{dash_division_id8.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายบัญชีต้นทุน\",\n        \"value\": {{dash_division_id9.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายขายและการตลาด\",\n        \"value\":{{dash_division_id10.data[0].count}}\n      }\n    ],\n    \"chart\": {\n      \"caption\": \"Division\",\n      \"theme\": \"fusion\",\n      \"alignCaptionWithCanvas\": 1,\n      \"captionFontSize\": \"24\",\n      \"captionAlignment\": \"center\",\n      \"captionPadding\": \"20\",\n      \"captionFontColor\": \"#231F20\",\n      \"legendIconSides\": \"4\",\n      \"legendIconBgAlpha\": \"100\",\n      \"legendIconAlpha\": \"100\",\n      \"legendPosition\": \"top\",\n      \"canvasPadding\": \"0\",\n      \"chartLeftMargin\": \"20\",\n      \"chartTopMargin\": \"10\",\n      \"chartRightMargin\": \"40\",\n      \"chartBottomMargin\": \"10\",\n      \"xAxisNameFontSize\": \"14\",\n      \"labelFontSize\": \"12\",\n      \"labelFontColor\": \"#716e6e\",\n      \"xAxisNameFontColor\": \"#716e6e\",\n      \"yAxisNameFontSize\": \"14\",\n      \"yAxisValueFontSize\": \"12\",\n      \"yAxisValueFontColor\": \"#716e6e\",\n      \"yAxisNameFontColor\": \"#716e6e\"\n    }\n  }\n}",
                       "key": "90iscqjc7f",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -1831,6 +1834,86 @@
             }
           ],
           [
+            {
+              "id": "Home_dash_division_id1",
+              "name": "dash_division_id1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id10",
+              "name": "dash_division_id10",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id2",
+              "name": "dash_division_id2",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id3",
+              "name": "dash_division_id3",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id4",
+              "name": "dash_division_id4",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id5",
+              "name": "dash_division_id5",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id6",
+              "name": "dash_division_id6",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id7",
+              "name": "dash_division_id7",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id8",
+              "name": "dash_division_id8",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_dash_division_id9",
+              "name": "dash_division_id9",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Home_dash_employee",
               "name": "dash_employee",
