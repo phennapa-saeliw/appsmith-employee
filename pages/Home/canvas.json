@@ -65,9 +65,10 @@
                   "children": [
                     {
                       "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                      "setAdaptiveYMin": false,
+                      "setAdaptiveYMin": true,
                       "widgetName": "chart_division",
                       "allowScroll": false,
+                      "dynamicPropertyPathList": [],
                       "displayName": "Chart",
                       "iconSVG": "/static/media/icon.6adbe31ed817fc4bfd66f9f0a6fc105c.svg",
                       "searchTags": [
@@ -89,7 +90,11 @@
                       "animateLoading": true,
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onDataPointClick"
+                        }
+                      ],
                       "leftColumn": 33,
                       "dynamicBindingPathList": [
                         {
@@ -103,6 +108,7 @@
                         }
                       ],
                       "customFusionChartConfig": "{\n  \"type\": \"bar2d\",\n  \"dataSource\": {\n    \"data\": [\n      {\n        \"label\": \"ฝ่ายต้อนรับ\",\n        \"value\": {{dash_division_id1.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายบริการ\",\n        \"value\": {{dash_division_id2.data[0].count}} \n      },\n      {\n        \"label\": \"ฝ่ายทำความสะอาด\",\n        \"value\": {{dash_division_id3.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายห้องผ้า\",\n        \"value\": {{dash_division_id4.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายอาหารและเครื่องดื่มตลาด\",\n        \"value\": {{dash_division_id5.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายกุ๊ก\",\n        \"value\": {{dash_division_id6.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายดูแลห้องครัว\",\n        \"value\": {{dash_division_id7.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายบัญชีทั่วไป\",\n        \"value\": {{dash_division_id8.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายบัญชีต้นทุน\",\n        \"value\": {{dash_division_id9.data[0].count}}\n      },\n      {\n        \"label\": \"ฝ่ายขายและการตลาด\",\n        \"value\":{{dash_division_id10.data[0].count}}\n      }\n    ],\n    \"chart\": {\n      \"caption\": \"Division\",\n      \"theme\": \"fusion\",\n      \"alignCaptionWithCanvas\": 1,\n      \"captionFontSize\": \"24\",\n      \"captionAlignment\": \"center\",\n      \"captionPadding\": \"20\",\n      \"captionFontColor\": \"#231F20\",\n      \"legendIconSides\": \"4\",\n      \"legendIconBgAlpha\": \"100\",\n      \"legendIconAlpha\": \"100\",\n      \"legendPosition\": \"top\",\n      \"canvasPadding\": \"0\",\n      \"chartLeftMargin\": \"20\",\n      \"chartTopMargin\": \"10\",\n      \"chartRightMargin\": \"40\",\n      \"chartBottomMargin\": \"10\",\n      \"xAxisNameFontSize\": \"14\",\n      \"labelFontSize\": \"12\",\n      \"labelFontColor\": \"#716e6e\",\n      \"xAxisNameFontColor\": \"#716e6e\",\n      \"yAxisNameFontSize\": \"14\",\n      \"yAxisValueFontSize\": \"12\",\n      \"yAxisValueFontColor\": \"#716e6e\",\n      \"yAxisNameFontColor\": \"#716e6e\"\n    }\n  }\n}",
+                      "onDataPointClick": "{{download('chart_division','chart_division','image/pdf')}}",
                       "key": "90iscqjc7f",
                       "isDeprecated": false,
                       "rightColumn": 63,
