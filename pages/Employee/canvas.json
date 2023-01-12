@@ -1461,7 +1461,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "ButtonConfirmDelete",
-                      "onClick": "{{delete_emp.run(); \nshowAlert(' ลบเรียบร้อยแล้วจ้า', 'success') ;\nget_employee.run();\ncloseModal('delete_Modal')}}",
+                      "onClick": "{{delete_emp.run(); \nshowAlert(' ลบเรียบร้อยแล้ว', 'success') ;\nget_employee.run();\ncloseModal('delete_Modal')}}",
                       "buttonColor": "#ef4444",
                       "dynamicPropertyPathList": [
                         {
@@ -2034,7 +2034,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_add",
-                              "onClick": "{{ insert_emp.run();\n\tshowAlert(' เพิ่มพนักงานสำเร็จจ้า', 'success') ;\nget_employee.run();\nclearStore();\ncloseModal('insert_Modal'); \n}}",
+                              "onClick": "{{ insert_emp.run();\n\tshowAlert(' เพิ่มพนักงานสำเร็จ', 'success') ;\nget_employee.run();\nclearStore();\ncloseModal('insert_Modal'); \n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -3041,7 +3041,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_edit",
-                              "onClick": "{{update_emp.run();\nshowAlert(' แก้ไขพนักงานสำเร็จจ้า', 'success') ;\nget_employee.run();\nclearStore();\ncloseModal('edit_modal')}}",
+                              "onClick": "{{update_emp.run();\nshowAlert(' แก้ไขพนักงานสำเร็จ', 'success') ;\nget_employee.run();\nclearStore();\ncloseModal('edit_modal')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
