@@ -600,7 +600,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "image_sign_in_google",
-                      "onClick": "{{navigateTo('https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/authorize',{\n\tprovider: 'google' ,\n\tredirect_to: 'https://foong-appwrite.tk/app/personnel/home-63b77298a9f4ff7974e6b0df/edit?embed=true'\n}, 'SAME_WINDOW')}}",
+                      "onClick": "{{navigateTo('https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/authorize',{\n\tprovider: 'google' ,\n\tredirect_to: 'https://foong-appwrite.tk/app/personnel/login-63b77298a9f4ff7974e6b0de?embed=true'\n}, 'SAME_WINDOW')}}",
                       "dynamicPropertyPathList": [
                         {
                           "key": "onClick"
