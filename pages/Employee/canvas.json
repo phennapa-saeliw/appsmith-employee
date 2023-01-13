@@ -135,7 +135,7 @@
                         }
                       },
                       "isVisible": true,
-                      "label": "{{get_user.data.email}}",
+                      "label": "{{appsmith.store.user.email}}",
                       "version": 1,
                       "parentId": "aqvskjd9li",
                       "renderMode": "CANVAS",
@@ -222,6 +222,17 @@
                               "boxShadow": "none",
                               "widgetName": "button_group_menu",
                               "isCanvas": false,
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "groupButtons.groupButton2.onClick"
+                                },
+                                {
+                                  "key": "groupButtons.groupButton1.onClick"
+                                },
+                                {
+                                  "key": "groupButtons.groupButtona5qesk46cp.onClick"
+                                }
+                              ],
                               "displayName": "Button Group",
                               "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
                               "searchTags": [
@@ -2034,7 +2045,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_add",
-                              "onClick": "{{ insert_emp.run();\n\tshowAlert(' เพิ่มพนักงานสำเร็จ', 'success') ;\nget_employee.run();\nclearStore();\ncloseModal('insert_Modal'); \n}}",
+                              "onClick": "{{ insert_emp.run();\n\tshowAlert(' เพิ่มพนักงานสำเร็จ', 'success') ;\nget_employee.run();\ncloseModal('insert_Modal'); \n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -2087,7 +2098,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "cancel_add",
-                              "onClick": "{{closeModal('insert_Modal')\nclearStore();\n}}",
+                              "onClick": "{{closeModal('insert_Modal')\n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -2369,7 +2380,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "onClose": "{{clearStore()}}",
+              "onClose": "",
               "borderRadius": "1.5rem",
               "maxDynamicHeight": 9000,
               "width": 618,
@@ -2715,7 +2726,7 @@
                           "widgetName": "Canvas10Copy",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 480,
+                          "bottomRow": 490,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -3041,7 +3052,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_edit",
-                              "onClick": "{{update_emp.run();\nshowAlert(' แก้ไขพนักงานสำเร็จ', 'success') ;\nget_employee.run();\nclearStore();\ncloseModal('edit_modal')}}",
+                              "onClick": "{{update_emp.run();\nshowAlert(' แก้ไขพนักงานสำเร็จ', 'success') ;\nget_employee.run();\ncloseModal('edit_modal')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -3094,7 +3105,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "cancel_edit",
-                              "onClick": "{{clearStore();\ncloseModal('edit_modal')\n}}",
+                              "onClick": "{{closeModal('edit_modal')\n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -3426,18 +3437,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Employee_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

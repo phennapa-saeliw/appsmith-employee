@@ -135,7 +135,7 @@
                         }
                       },
                       "isVisible": true,
-                      "label": "{{get_user.data.email}}",
+                      "label": "{{appsmith.store.user.email}}",
                       "version": 1,
                       "parentId": "aqvskjd9li",
                       "renderMode": "CANVAS",
@@ -526,7 +526,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "Email\t\t:\t\t{{get_user.data.email}}",
+                              "text": "Email\t\t:\t\t{{appsmith.store.user.email}}",
                               "key": "d6doc2uiea",
                               "isDeprecated": false,
                               "rightColumn": 48,
@@ -611,20 +611,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "User_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.store.access_token"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "User",
