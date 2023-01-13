@@ -3052,7 +3052,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_edit",
-                              "onClick": "{{update_emp.run();\nshowAlert(' แก้ไขพนักงานสำเร็จ', 'success') ;\nget_employee.run();\ncloseModal('edit_modal')}}",
+                              "onClick": "{{update_emp.run();\nshowAlert(' แก้ไขพนักงานสำเร็จ.' , 'success') ;\nget_employee.run();\ncloseModal('edit_modal')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
