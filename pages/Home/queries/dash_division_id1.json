@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT \n\t\tCOUNT (division_id) \nFROM \n\t\tpublic.employee\nWHERE division_id = 1;",
+      "body": "SELECT \n\t\tCOUNT (division_id)\nFROM \n\t\tpublic.employee\n\t\twhere division_id = 1",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

@@ -582,6 +582,7 @@
                               "boxShadow": "none",
                               "widgetName": "button_group_menu",
                               "isCanvas": false,
+                              "dynamicPropertyPathList": [],
                               "displayName": "Button Group",
                               "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
                               "searchTags": [

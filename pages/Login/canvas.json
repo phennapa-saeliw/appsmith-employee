@@ -600,7 +600,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "image_sign_in_google",
-                      "onClick": "{{navigateTo('https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/authorize',{\n\tprovider: 'google' ,\n\tredirect_to: 'https://foong-appwrite.tk/app/personnel/home-63b77298a9f4ff7974e6b0df?embed=true'\n}, 'SAME_WINDOW')}}",
+                      "onClick": "{{\nnavigateTo('https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/authorize',{\n\tprovider: 'google' ,\n\tredirect_to: 'https://foong-appwrite.tk/app/personnel/home-63b77298a9f4ff7974e6b0df/edit?embed=true'\n\n},\n\t 'SAME_WINDOW')}}",
                       "dynamicPropertyPathList": [
                         {
                           "key": "onClick"
@@ -675,7 +675,21 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Login_login.continue",
+              "name": "login.continue",
+              "collectionId": "Login_login",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  if (!appsmith.URL.fullPath.includes('#access_token=')) return;\n  appsmith.URL.fullPath.split('#')[1].split('&').forEach(i => {\n    const [key, value] = i.split('=');\n    storeValue(key, value);\n  });\n  navigateTo('Home');\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Login",
