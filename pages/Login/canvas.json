@@ -515,16 +515,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Login_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Login_login.continue",
               "name": "login.continue",
               "collectionId": "Login_login",
