@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "login",
-    "pageId": "Login",
+    "pageId": "Login Copy",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -10,7 +10,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "Login_login",
+  "id": "Login Copy_login",
   "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2e27a6a0d0c01bfb01b23"
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63ce4c3529e6fc43b6bc56be"
 }
