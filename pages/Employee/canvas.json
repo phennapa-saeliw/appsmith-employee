@@ -433,6 +433,7 @@
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 9,
                       "isSortable": false,
+                      "onPageChange": "{{get_employee.run()}}",
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
                       "animateLoading": true,
@@ -487,18 +488,21 @@
                         },
                         {
                           "key": "primaryColumns.division_id.computedValue"
+                        },
+                        {
+                          "key": "totalRecordsCount"
                         }
                       ],
                       "leftColumn": 11,
                       "delimiter": ",",
-                      "defaultSelectedRowIndex": "",
+                      "defaultSelectedRowIndex": "1",
                       "showInlineEditingOptionDropdown": true,
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisibleFilters": false,
                       "isVisible": true,
                       "enableClientSideSearch": false,
                       "version": 1,
-                      "totalRecordsCount": "",
+                      "totalRecordsCount": "{{get_emp_Pagination.data.length}}",
                       "isLoading": false,
                       "childStylesheet": {
                         "button": {
@@ -552,10 +556,13 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.onClick"
+                        },
+                        {
+                          "key": "onPageChange"
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 71,
+                      "bottomRow": 66,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -570,7 +577,7 @@
                         "sex": 60,
                         "customColumn1": 68,
                         "customColumn2": 60,
-                        "division": 109
+                        "division": 127
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -584,6 +591,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.onClick"
+                        },
+                        {
+                          "key": "onPageChange"
                         }
                       ],
                       "borderWidth": "1",
@@ -951,7 +961,7 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "aqvskjd9li",
-                      "serverSidePaginationEnabled": false,
+                      "serverSidePaginationEnabled": true,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
@@ -1337,7 +1347,7 @@
               "parentRowSpace": 1,
               "type": "MODAL_WIDGET",
               "hideCard": false,
-              "shouldScrollContents": true,
+              "shouldScrollContents": false,
               "minHeight": 260,
               "animateLoading": true,
               "parentColumnSpace": 1,
@@ -1353,13 +1363,13 @@
                   "widgetName": "Canvas7",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 270,
+                  "bottomRow": 290,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 270,
+                  "minHeight": 290,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -1555,7 +1565,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Are you sure you want to delete this item?",
+                      "text": "Are you sure you want to delete this name?",
                       "key": "bwp57iyle7",
                       "isDeprecated": false,
                       "rightColumn": 61,
@@ -1612,7 +1622,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Delete Row Employee_id: {{table_employee.triggeredRow.employee_id}}",
+                      "text": "Delete Row Employee_Name: {{table_employee.triggeredRow.employee_name}}",
                       "key": "wikt2u60r8",
                       "isDeprecated": false,
                       "rightColumn": 61,
@@ -1648,7 +1658,7 @@
                 }
               ],
               "key": "sqe60llph4",
-              "height": 270,
+              "height": 288,
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
@@ -3430,13 +3440,33 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Employee_get_employee",
               "name": "get_employee",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "table_employee.pageNo",
+                "(table_employee.pageSize*(table_employee.pageNo-1))",
+                "table_employee.pageSize",
+                "(table_employee.pageSize-1)+(table_employee.pageSize*(table_employee.pageNo-1))"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Employee_get_emp_Pagination",
+              "name": "get_emp_Pagination",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "table_employee.pageNo",
+                "table_employee.pageSize"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
