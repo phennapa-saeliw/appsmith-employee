@@ -431,7 +431,7 @@
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": false,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 9,
+                      "topRow": 14,
                       "isSortable": false,
                       "onPageChange": "{{get_employee.run()}}",
                       "type": "TABLE_WIDGET_V2",
@@ -556,13 +556,10 @@
                         },
                         {
                           "key": "primaryColumns.customColumn2.onClick"
-                        },
-                        {
-                          "key": "onPageChange"
                         }
                       ],
                       "displayName": "Table",
-                      "bottomRow": 66,
+                      "bottomRow": 71,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -581,6 +578,7 @@
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
+                      "onPageSizeChange": "",
                       "parentColumnSpace": 17.642578125,
                       "dynamicTriggerPathList": [
                         {
@@ -594,6 +592,9 @@
                         },
                         {
                           "key": "onPageChange"
+                        },
+                        {
+                          "key": "onPageSizeChange"
                         }
                       ],
                       "borderWidth": "1",
@@ -986,8 +987,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 5,
-                      "bottomRow": 9,
+                      "topRow": 8,
+                      "bottomRow": 12,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
@@ -2055,7 +2056,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                               "widgetName": "button_add",
-                              "onClick": "{{ insert_emp.run();\n\tshowAlert(' เพิ่มพนักงานสำเร็จ', 'success') ;\nget_employee.run();\ncloseModal('insert_Modal'); \n}}",
+                              "onClick": "{{ insert_emp.run();\n\tshowAlert(' เพิ่มพนักงานสำเร็จ', 'success') ;\nget_employee.run();\nget_emp_Pagination.run();\ncloseModal('insert_Modal'); \n}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -2068,8 +2069,8 @@
                                 "click",
                                 "submit"
                               ],
-                              "topRow": 41,
-                              "bottomRow": 45,
+                              "topRow": 42,
+                              "bottomRow": 46,
                               "type": "BUTTON_WIDGET",
                               "hideCard": false,
                               "animateLoading": true,
@@ -3444,6 +3445,14 @@
           ],
           [
             {
+              "id": "Employee_get_emp_Pagination",
+              "name": "get_emp_Pagination",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Employee_get_employee",
               "name": "get_employee",
               "confirmBeforeExecute": false,
@@ -3453,19 +3462,6 @@
                 "(table_employee.pageSize*(table_employee.pageNo-1))",
                 "table_employee.pageSize",
                 "(table_employee.pageSize-1)+(table_employee.pageSize*(table_employee.pageNo-1))"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Employee_get_emp_Pagination",
-              "name": "get_emp_Pagination",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "table_employee.pageNo",
-                "table_employee.pageSize"
               ],
               "timeoutInMillisecond": 10000
             }
