@@ -23,6 +23,10 @@
     {
       "id": "Login Copy",
       "isDefault": false
+    },
+    {
+      "id": "User Copy",
+      "isDefault": false
     }
   ],
   "viewMode": false,
