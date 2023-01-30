@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_employee",
+    "name": "get_position",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
@@ -17,11 +17,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "User Copy",
+    "pageId": "User 1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/employee",
+      "path": "/rest/v1/position",
       "headers": [
         {
           "key": "apikey",
@@ -40,11 +40,7 @@
       "queryParameters": [
         {
           "key": "select",
-          "value": "*,division(division_id,division_name)"
-        },
-        {
-          "key": "order",
-          "value": "employee_id.asc"
+          "value": "*"
         }
       ],
       "httpMethod": "GET",
@@ -64,7 +60,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "User Copy_get_employee",
+  "id": "User 1_get_position",
   "deleted": false,
-  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63cf9b7429e6fc43b6bc581d"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63a2d2fe647efb486b76b3b0"
 }

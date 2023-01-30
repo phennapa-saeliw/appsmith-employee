@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_department",
+    "name": "update_user",
     "datasource": {
       "name": "https://dscfsshcuqomvwcvryye.supabase.co",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "https://dscfsshcuqomvwcvryye.supabase.co"
       },
       "invalids": [],
@@ -17,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "User Copy",
+    "pageId": "User",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/rest/v1/department",
+      "path": "/auth/v1/user",
       "headers": [
         {
           "key": "apikey",
@@ -29,7 +28,7 @@
         },
         {
           "key": "Authorization",
-          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzY2Zzc2hjdXFvbXZ3Y3ZyeXllIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAzODk4NzAsImV4cCI6MTk4NTk2NTg3MH0.-QdV4dkKgRtGD295qBiD__dwUuBcTkqZz9lAEfWWYPM"
+          "value": "Bearer {{appsmith.store.jwt}}"
         },
         {
           "key": "content-type",
@@ -37,30 +36,37 @@
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [
-        {
-          "key": "select",
-          "value": "department_name"
-        }
-      ],
-      "httpMethod": "GET",
+      "queryParameters": [],
+      "body": "{\n  \"email\": \"{{n_email.text}}\",\n  \"password\": \"{{n_pass.text}}\"\n}",
+      "httpMethod": "PUT",
       "selfReferencingDataPaths": [],
       "formData": {
         "apiContentType": "application/json"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      },
+      {
+        "key": "headers[1].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.jwt",
+      "n_email.text",
+      "n_pass.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "User Copy_get_department",
+  "id": "User_update_user",
   "deleted": false,
-  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63cf9b7429e6fc43b6bc5824"
+  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63d768ae3b57a70f0657d205"
 }

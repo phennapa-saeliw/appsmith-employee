@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "log_out",
-    "pageId": "User Copy",
+    "pageId": "User 1",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -10,7 +10,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "User Copy_log_out",
+  "id": "User 1_log_out",
   "deleted": false,
-  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63cf9b7429e6fc43b6bc582b"
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac6beab7e37c573eaad445"
 }
