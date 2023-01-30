@@ -962,7 +962,7 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "aqvskjd9li",
-                      "serverSidePaginationEnabled": true,
+                      "serverSidePaginationEnabled": false,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
@@ -1838,6 +1838,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
+                              "shouldScrollContents": true,
                               "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 6.625,
@@ -2208,9 +2209,11 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "timePrecision": "None",
+                              "originalTopRow": 24,
                               "borderRadius": "1.5rem",
                               "maxDynamicHeight": 9000,
                               "firstDayOfWeek": 0,
+                              "originalBottomRow": 31,
                               "closeOnSelection": true,
                               "minDynamicHeight": 4
                             },
@@ -3441,6 +3444,14 @@
               "pluginType": "API",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Employee_get_employee",
+              "name": "get_employee",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -3450,19 +3461,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Employee_get_employee",
-              "name": "get_employee",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "table_employee.pageNo",
-                "(table_employee.pageSize*(table_employee.pageNo-1))",
-                "table_employee.pageSize",
-                "(table_employee.pageSize-1)+(table_employee.pageSize*(table_employee.pageNo-1))"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

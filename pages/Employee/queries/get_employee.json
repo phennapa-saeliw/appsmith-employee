@@ -34,18 +34,6 @@
         {
           "key": "content-type",
           "value": "application/json"
-        },
-        {
-          "key": "Range",
-          "value": "{{(table_employee.pageSize*(table_employee.pageNo-1))}}-{{(table_employee.pageSize-1)+(table_employee.pageSize*(table_employee.pageNo-1))}}"
-        },
-        {
-          "key": "pageSize",
-          "value": "{{table_employee.pageSize}}"
-        },
-        {
-          "key": "pageNo",
-          "value": "{{table_employee.pageNo}}"
         }
       ],
       "encodeParamsToggle": true,
@@ -66,26 +54,11 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "headers[3].value"
-      },
-      {
-        "key": "headers[4].value"
-      },
-      {
-        "key": "headers[5].value"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "(table_employee.pageSize*(table_employee.pageNo-1))",
-      "(table_employee.pageSize-1)+(table_employee.pageSize*(table_employee.pageNo-1))",
-      "table_employee.pageNo",
-      "table_employee.pageSize"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
