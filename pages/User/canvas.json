@@ -950,7 +950,7 @@
                       "labelPosition": "Left",
                       "labelStyle": "",
                       "inputType": "EMAIL",
-                      "isDisabled": false,
+                      "isDisabled": true,
                       "key": "x4l29pkpoh",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
