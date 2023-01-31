@@ -553,6 +553,7 @@
                               "widgetName": "Button1",
                               "onClick": "{{showModal('new_pass')}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "dynamicPropertyPathList": [],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                               "searchTags": [
@@ -571,7 +572,7 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 17,
+                              "leftColumn": 22,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "buttonColor"
@@ -584,7 +585,7 @@
                               "isDisabled": false,
                               "key": "e5h79qgt20",
                               "isDeprecated": false,
-                              "rightColumn": 48,
+                              "rightColumn": 43,
                               "isDefaultClickDisabled": true,
                               "widgetId": "lznqyq7kf5",
                               "isVisible": true,
@@ -676,7 +677,7 @@
               "parentRowSpace": 1,
               "type": "MODAL_WIDGET",
               "hideCard": false,
-              "shouldScrollContents": true,
+              "shouldScrollContents": false,
               "animateLoading": true,
               "parentColumnSpace": 1,
               "dynamicTriggerPathList": [],
@@ -691,20 +692,21 @@
                   "widgetName": "Canvas2",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 416,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 416,
+                  "minHeight": 372,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "n_pass",
+                      "widgetName": "cn_pass",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -713,8 +715,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 17,
-                      "bottomRow": 22,
+                      "topRow": 22,
+                      "bottomRow": 29,
                       "parentRowSpace": 10,
                       "labelWidth": "15",
                       "autoFocus": false,
@@ -733,7 +735,64 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Left",
+                      "labelPosition": "Top",
+                      "labelStyle": "",
+                      "inputType": "PASSWORD",
+                      "isDisabled": false,
+                      "key": "x4l29pkpoh",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "isDeprecated": false,
+                      "rightColumn": 60,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "m18gfsoagq",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "errorMessage": "",
+                      "isVisible": true,
+                      "label": "Confirm New Password",
+                      "version": 2,
+                      "parentId": "iuyuw9iid3",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "iconAlign": "left",
+                      "defaultText": "",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "n_pass",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "topRow": 14,
+                      "bottomRow": 21,
+                      "parentRowSpace": 10,
+                      "labelWidth": "15",
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.9375,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 4,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "PASSWORD",
                       "isDisabled": false,
@@ -746,7 +805,7 @@
                       "widgetId": "men2nodf6h",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
-                      "label": "New password",
+                      "label": "New Password",
                       "version": 2,
                       "parentId": "iuyuw9iid3",
                       "labelAlignment": "left",
@@ -814,14 +873,15 @@
                       "widgetName": "Button2",
                       "onClick": "{{closeModal('new_pass')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
                         "click",
                         "submit"
                       ],
-                      "topRow": 35,
-                      "bottomRow": 39,
+                      "topRow": 30,
+                      "bottomRow": 34,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -830,7 +890,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 30,
+                      "leftColumn": 28,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -843,7 +903,7 @@
                       "isDisabled": false,
                       "key": "e5h79qgt20",
                       "isDeprecated": false,
-                      "rightColumn": 46,
+                      "rightColumn": 44,
                       "isDefaultClickDisabled": true,
                       "widgetId": "7a12vh1rq6",
                       "buttonStyle": "PRIMARY",
@@ -862,7 +922,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button3",
-                      "onClick": "{{update_user.run();\nshowAlert(' เปลี่ยนพาสเวิร์ดสำเร็จ.' , 'success') ;\ncloseModal('new_pass')}}",
+                      "onClick": "{{pass.npass();\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -875,8 +935,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 35,
-                      "bottomRow": 39,
+                      "topRow": 30,
+                      "bottomRow": 34,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -885,7 +945,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 46,
+                      "leftColumn": 44,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -898,7 +958,7 @@
                       "isDisabled": false,
                       "key": "e5h79qgt20",
                       "isDeprecated": false,
-                      "rightColumn": 62,
+                      "rightColumn": 60,
                       "isDefaultClickDisabled": true,
                       "widgetId": "9nxzbqp6ki",
                       "buttonStyle": "PRIMARY_BUTTON",
@@ -924,8 +984,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 10,
-                      "bottomRow": 15,
+                      "topRow": 6,
+                      "bottomRow": 13,
                       "parentRowSpace": 10,
                       "labelWidth": "15",
                       "autoFocus": false,
@@ -947,7 +1007,7 @@
                           "key": "defaultText"
                         }
                       ],
-                      "labelPosition": "Left",
+                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "EMAIL",
                       "isDisabled": true,
@@ -987,9 +1047,10 @@
                 }
               ],
               "key": "jg66kcmx6h",
-              "height": 416,
+              "height": 372,
               "isDeprecated": false,
               "rightColumn": 0,
+              "backgroundColor": "#FFFFF9",
               "detachFromLayout": true,
               "dynamicHeight": "FIXED",
               "widgetId": "ib1iclv3nh",
@@ -1001,7 +1062,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "width": 662,
+              "width": 472,
               "minDynamicHeight": 10
             }
           ]
