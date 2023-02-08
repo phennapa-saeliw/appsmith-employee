@@ -329,6 +329,7 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
+                      "regex": "^[a-zA-Z0-9]{8,16}$",
                       "originalTopRow": 68,
                       "borderRadius": "1.5rem",
                       "maxDynamicHeight": 9000,
