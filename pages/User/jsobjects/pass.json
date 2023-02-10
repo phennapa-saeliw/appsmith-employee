@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tnpass: async () => {\n\t\tif ((n_pass.text) === (cn_pass.text))\n\t\t\tconsole.log(update_user.run()) ,showAlert(' เปลี่ยนพาสเวิร์ดสำเร็จ.' , 'success') , closeModal('new_pass')  ;\n\t\n\t\telse (console.log \n    \t(showAlert(' กรุณากรอกพาสเวิร์ดให้ตรงกัน.', 'error')))\n\t\t\t\n                                                                            \n\t\t\t\n\t},\n\t\n\t\n\t\n\t\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "body": "export default {\n\tnpass: async () => {\n\t\t\tif(n_pass.text.length <= 7){\n\t\t\tshowAlert('Error กรุณาใส่พาสเวิร์ด 8 ตัวขึ้นไป','error')\n\t\t\t\t} else{\n\t\tif ((n_pass.text) === (cn_pass.text))\n\t\t\tconsole.log(update_user.run()) ,showAlert(' เปลี่ยนพาสเวิร์ดสำเร็จ.' , 'success') , closeModal('new_pass')  ;\t\n\t\telse (console.log \n    \t(showAlert(' กรุณากรอกพาสเวิร์ดให้ตรงกัน.', 'error')))\n\t\t}\n                                                                            \t\t\n\t},\n\t\n\t\n\t\n\t\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },
