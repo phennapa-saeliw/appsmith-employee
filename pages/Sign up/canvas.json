@@ -315,6 +315,7 @@
                       "placeholderText": "P A S S W O R D",
                       "isDisabled": false,
                       "key": "qsjskt3kom",
+                      "validation": "",
                       "labelTextSize": "1rem",
                       "isRequired": false,
                       "isDeprecated": false,
