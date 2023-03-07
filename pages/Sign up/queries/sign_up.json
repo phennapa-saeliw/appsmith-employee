@@ -17,7 +17,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/auth/v1/signup",
+      "path": "https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/signup",
       "headers": [
         {
           "key": "content-type",
@@ -39,11 +39,7 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],

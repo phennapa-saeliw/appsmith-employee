@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "sign_in",
+    "name": "Api1",
     "datasource": {
       "name": "auth",
       "pluginId": "restapi-plugin",
@@ -13,27 +13,34 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login Copy",
+    "pageId": "User",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/auth/v1/token",
       "headers": [
         {
-          "key": "content-type",
-          "value": "application/json"
+          "key": "",
+          "value": ""
+        },
+        {
+          "key": "",
+          "value": ""
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "grant_type",
-          "value": "password"
+          "key": "",
+          "value": ""
+        },
+        {
+          "key": "",
+          "value": ""
         }
       ],
-      "body": "{\n  \"email\": \"{{email.text}}\",\n  \"password\": \"{{password.text}}\"\n}\n",
+      "body": "",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -41,28 +48,20 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "email.text",
-      "password.text"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login Copy_sign_in",
+  "id": "User_Api1",
   "deleted": false,
-  "gitSyncId": "63b77293a9f4ff7974e6b0d2_63ce4c3529e6fc43b6bc56b8"
+  "gitSyncId": "6406a6f78424293fe78764af_6406bbeb8424293fe7876539"
 }

@@ -1,0 +1,7 @@
+export default {
+	Logout: () => {
+		Object.keys(appsmith.store).map(key =>storeValue(key, undefined));
+	//	clearStore()
+			navigateTo('Login')
+	}
+}

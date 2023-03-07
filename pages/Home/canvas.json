@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 830,
+          "bottomRow": 750,
           "containerStyle": "none",
           "snapRows": 85,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 77,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -1653,6 +1653,7 @@
                         }
                       },
                       "borderRadius": "1.5rem",
+                      "columnUpdatedAt": 1678159598969,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -1705,7 +1706,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "name": {
                           "allowCellWrapping": false,
@@ -1733,7 +1735,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "division_id": {
                           "allowCellWrapping": false,
@@ -1761,10 +1764,12 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division_id\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         }
                       },
                       "key": "r30wox1zm8",
+                      "canFreezeColumn": false,
                       "isDeprecated": false,
                       "rightColumn": 32,
                       "textSize": "0.875rem",

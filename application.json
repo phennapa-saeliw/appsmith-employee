@@ -19,14 +19,6 @@
     {
       "id": "Sign up",
       "isDefault": false
-    },
-    {
-      "id": "Login Copy",
-      "isDefault": false
-    },
-    {
-      "id": "User 1",
-      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -40,6 +32,8 @@
   "publishedAppLayout": {
     "type": "DESKTOP"
   },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "embedSetting": {
