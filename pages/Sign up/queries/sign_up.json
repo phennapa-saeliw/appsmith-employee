@@ -17,7 +17,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/signup",
+      "path": "/auth/v1/signup",
       "headers": [
         {
           "key": "content-type",
