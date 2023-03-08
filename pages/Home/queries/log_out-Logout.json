@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  Object.keys(appsmith.store).map(key => storeValue(key, undefined));\n  navigateTo('Login');\n}",
+      "body": "() => {\n  Object.keys(appsmith.store).map(key => storeValue(key, undefined));\n  showAlert('ออกจากระบบสำเร็จ.', 'success');\n  navigateTo('Login');\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  Object.keys(appsmith.store).map(key => storeValue(key, undefined));\n  navigateTo('Login');\n}"
+      "() => {\n  Object.keys(appsmith.store).map(key => storeValue(key, undefined));\n  showAlert('ออกจากระบบสำเร็จ.', 'success');\n  navigateTo('Login');\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
