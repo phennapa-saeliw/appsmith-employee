@@ -9,6 +9,7 @@ onLogIn: async () => {
                                                                             storeValue('jwt', jwt);
                                                                             storeValue('user', user);
 																																		     	  navigateTo('Home', {})
+																																			showAlert('เข้าสู่ระบบสำเร็จ.', 'success')
                                                                                     }
                                     } catch (error) {
                                                                                     showAlert('อีเมลหรือรหัสผ่านผิด.', 'error')
