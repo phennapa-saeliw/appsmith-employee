@@ -6,7 +6,6 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tLogout: () => {\n\t\tObject.keys(appsmith.store).map(key =>storeValue(key, undefined));\n\t\t\tnavigateTo('Login')\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

@@ -6,7 +6,6 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tadd: async () => {\n\t\ttry {\n\t\t\tawait insert_employee.run();\n\t\t} catch (e) {\n\t\t\tshowAlert(`${e.message}: รหัสพนักงานซ้ำ Id ${add_employee_id.inputText}.`,'warning' )\n\t\t}\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },
