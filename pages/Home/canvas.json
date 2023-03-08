@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 75,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -870,12 +870,12 @@
                           "widgetName": "Canvas10",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 110,
+                          "bottomRow": 120,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
                           "hideCard": true,
-                          "minHeight": 110,
+                          "minHeight": 120,
                           "parentColumnSpace": 1,
                           "leftColumn": 0,
                           "dynamicBindingPathList": [],
@@ -889,8 +889,8 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 4,
-                              "bottomRow": 8,
+                              "topRow": 6,
+                              "bottomRow": 10,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -927,10 +927,10 @@
                               "parentId": "evmmdm5v6t",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 6,
+                              "originalTopRow": 4,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 10,
+                              "originalBottomRow": 8,
                               "fontSize": "1rem",
                               "minDynamicHeight": 4
                             },
@@ -977,7 +977,7 @@
                                 "label"
                               ],
                               "topRow": 0,
-                              "bottomRow": 4,
+                              "bottomRow": 6,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -1017,7 +1017,7 @@
                               "originalTopRow": 0,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 6,
+                              "originalBottomRow": 4,
                               "fontSize": "1.25rem",
                               "minDynamicHeight": 4
                             },
@@ -1030,8 +1030,8 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 4,
-                              "bottomRow": 8,
+                              "topRow": 6,
+                              "bottomRow": 10,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -1068,10 +1068,10 @@
                               "parentId": "evmmdm5v6t",
                               "renderMode": "CANVAS",
                               "isLoading": false,
-                              "originalTopRow": 6,
+                              "originalTopRow": 4,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 10,
+                              "originalBottomRow": 8,
                               "fontSize": "1.25rem",
                               "minDynamicHeight": 4
                             }
@@ -1858,6 +1858,14 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Home_dash_employee",
+              "name": "dash_employee",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Home_get_position",
               "name": "get_position",
               "confirmBeforeExecute": false,
@@ -1875,16 +1883,6 @@
               "jsonPathKeys": [
                 "appsmith.store.access_token"
               ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Home_dash_employee",
-              "name": "dash_employee",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

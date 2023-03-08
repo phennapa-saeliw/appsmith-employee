@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 830,
+          "bottomRow": 860,
           "containerStyle": "none",
           "snapRows": 85,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 77,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -566,6 +566,7 @@
                       },
                       "borderRadius": "0.375rem",
                       "originalBottomRow": 83,
+                      "columnUpdatedAt": 1678156894079,
                       "primaryColumnId": "employee_id",
                       "defaultSelectedRowIndices": "[\n  0\n]",
                       "widgetName": "table_employee",
@@ -658,7 +659,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"employee_id\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "employee_name": {
                           "allowCellWrapping": false,
@@ -686,7 +688,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"employee_name\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "email": {
                           "allowCellWrapping": false,
@@ -714,7 +717,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "division_id": {
                           "allowCellWrapping": false,
@@ -742,7 +746,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "position": {
                           "allowCellWrapping": false,
@@ -770,7 +775,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"position\"].name))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "start_date": {
                           "allowCellWrapping": false,
@@ -800,7 +806,8 @@
                           "validation": {},
                           "cellBackground": "",
                           "outputFormat": "DD-MM-YYYY",
-                          "inputFormat": "YYYY-MM-DD"
+                          "inputFormat": "YYYY-MM-DD",
+                          "sticky": ""
                         },
                         "dob": {
                           "allowCellWrapping": false,
@@ -830,7 +837,8 @@
                           "validation": {},
                           "cellBackground": "",
                           "outputFormat": "DD-MM-YYYY",
-                          "inputFormat": "YYYY-MM-DD"
+                          "inputFormat": "YYYY-MM-DD",
+                          "sticky": ""
                         },
                         "sex": {
                           "allowCellWrapping": false,
@@ -858,7 +866,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sex\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "customColumn1": {
                           "allowCellWrapping": false,
@@ -891,7 +900,8 @@
                           "onClick": "{{storeValue('delete', table_employee.triggeredRow.employee_id);   showModal('delete_Modal')}}",
                           "buttonVariant": "TERTIARY",
                           "iconName": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( 'trash'))}}",
-                          "buttonColor": "#dc2626"
+                          "buttonColor": "#dc2626",
+                          "sticky": ""
                         },
                         "division": {
                           "allowCellWrapping": false,
@@ -919,7 +929,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"division\"].division_name))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         },
                         "customColumn2": {
                           "allowCellWrapping": false,
@@ -953,7 +964,8 @@
                           "customAlias": "",
                           "iconName": "annotation",
                           "buttonVariant": "TERTIARY",
-                          "onClick": "{{storeValue('edit', table_employee.triggeredRow.employee_id);   showModal('edit_modal')}}"
+                          "onClick": "{{storeValue('edit', table_employee.triggeredRow.employee_id);   showModal('edit_modal')}}",
+                          "sticky": ""
                         },
                         "position_id": {
                           "allowCellWrapping": false,
@@ -981,11 +993,13 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{table_employee.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"position\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "sticky": ""
                         }
                       },
                       "onRowSelected": "",
                       "key": "5hqlre3rtc",
+                      "canFreezeColumn": false,
                       "isDeprecated": false,
                       "rightColumn": 63,
                       "textSize": "0.875rem",
@@ -1740,7 +1754,7 @@
                   "widgetName": "Canvas8",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 500,
+                  "bottomRow": 480,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -2793,7 +2807,7 @@
                   "widgetName": "Canvas11",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 500,
+                  "bottomRow": 480,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
