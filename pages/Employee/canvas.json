@@ -3058,7 +3058,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "แก้ไขแถว รหัสพนักงาน: {{table_employee.triggeredRow.employee_name}}",
+                              "text": "แก้ไขพนักงานชื่อ : {{table_employee.triggeredRow.employee_name}}",
                               "key": "80im4v3yks",
                               "isDeprecated": false,
                               "rightColumn": 57,
