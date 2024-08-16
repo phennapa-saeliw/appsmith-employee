@@ -1,0 +1,9 @@
+{ 
+  "employee_name": "{{edit_employee_name.text}}",
+  "email": "{{edit_employee_email.text}}",
+  "division_id": "{{edit_employee_division.selectedOptionValue}}",
+  "position_id": "{{edit_employee_position.selectedOptionValue}}",
+  "start_date": "{{edit_employee_start_date.formattedDate}}",
+  "dob": "{{edit_employee_dob.formattedDate}}",
+  "sex": "{{edit_employee_sex.selectedOptionValue}}"
+}

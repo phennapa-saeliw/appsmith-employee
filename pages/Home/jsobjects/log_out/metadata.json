@@ -1,15 +1,11 @@
 {
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac6976b7e37c573eaad42f",
+  "id": "Home_log_out",
   "unpublishedCollection": {
     "name": "log_out",
     "pageId": "Home",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
-    "variables": [],
-    "userPermissions": []
-  },
-  "id": "Home_log_out",
-  "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63ac6976b7e37c573eaad42f"
+    "variables": []
+  }
 }

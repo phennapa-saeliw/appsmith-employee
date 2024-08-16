@@ -1,0 +1,65 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 40,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "displayName": "Radio Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.ba2b2ee006e51a5c681d7964d7777481.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "a4zcbgxme5",
+  "label": "เพศ",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onSelectionChange": "",
+  "options": [
+    {
+      "label": "ชาย",
+      "value": "ชาย"
+    },
+    {
+      "label": "หญิง",
+      "value": "หญิง"
+    }
+  ],
+  "originalBottomRow": 40,
+  "originalTopRow": 33,
+  "parentColumnSpace": 19.8125,
+  "parentId": "qraedk4bov",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 62,
+  "searchTags": [
+    "choice"
+  ],
+  "topRow": 33,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "40m8tw2612",
+  "widgetName": "add_employee_sex"
+}

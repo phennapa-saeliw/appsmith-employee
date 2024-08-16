@@ -1,0 +1,55 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "1.5rem",
+  "bottomRow": 40,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  "chartData": {
+    "t1yhcpyt1b": {
+      "data": "",
+      "seriesName": "Sales"
+    }
+  },
+  "chartName": "Department",
+  "chartType": "CUSTOM_FUSION_CHART",
+  "customFusionChartConfig": "{\n  \"type\": \"pie3d\",\n  \"dataSource\": {\n    \"data\": [\n      {\n        \"label\": \"แผนกต้อนรับส่วนหน้า\",\n        \"value\": 2\n      },\n      {\n        \"label\": \"แผนกแม่บ้าน\",\n        \"value\": 2 \n      },\n      {\n        \"label\": \"แผนกครัว\",\n        \"value\": 2\n      },\n      {\n        \"label\": \"แผนกบัญชี\",\n        \"value\": 3\n      },\n      {\n        \"label\": \"แผนกขายและการตลาด\",\n        \"value\": 1\n      }\n    ],\n    \"chart\": {\n      \"caption\": \"Department\",\n      \"theme\": \"fusion\",\n      \"alignCaptionWithCanvas\": 1,\n      \"captionFontSize\": \"24\",\n      \"captionAlignment\": \"center\",\n      \"captionPadding\": \"20\",\n      \"captionFontColor\": \"#231F20\",\n      \"legendIconSides\": \"4\",\n      \"legendIconBgAlpha\": \"100\",\n      \"legendIconAlpha\": \"100\",\n      \"legendPosition\": \"top\",\n      \"canvasPadding\": \"0\",\n      \"chartLeftMargin\": \"20\",\n      \"chartTopMargin\": \"10\",\n      \"chartRightMargin\": \"40\",\n      \"chartBottomMargin\": \"10\",\n      \"xAxisNameFontSize\": \"14\",\n      \"labelFontSize\": \"12\",\n      \"labelFontColor\": \"#716e6e\",\n      \"xAxisNameFontColor\": \"#716e6e\",\n      \"yAxisNameFontSize\": \"14\",\n      \"yAxisValueFontSize\": \"12\",\n      \"yAxisValueFontColor\": \"#716e6e\",\n      \"yAxisNameFontColor\": \"#716e6e\"\n    }\n  }\n}",
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.6adbe31ed817fc4bfd66f9f0a6fc105c.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "90iscqjc7f",
+  "labelOrientation": "auto",
+  "leftColumn": 12,
+  "originalBottomRow": 67,
+  "originalTopRow": 9,
+  "parentColumnSpace": 19.5,
+  "parentId": "aqvskjd9li",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 32,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "topRow": 8,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "mk455y1c69",
+  "widgetName": "chart_department",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

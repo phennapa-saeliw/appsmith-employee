@@ -1,0 +1,32 @@
+{
+  "animateLoading": true,
+  "bottomRow": 67,
+  "capSide": 0,
+  "capType": "nc",
+  "displayName": "Divider",
+  "dividerColor": "#858282",
+  "dynamicBindingPathList": [],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.cbe8f608ca868e1eb44607e5fbd4a9e5.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "copggwc6np",
+  "leftColumn": 34,
+  "orientation": "horizontal",
+  "parentColumnSpace": 8.471954345703125,
+  "parentId": "j1vm9sq0th",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 44,
+  "searchTags": [
+    "line"
+  ],
+  "strokeStyle": "solid",
+  "thickness": 2,
+  "topRow": 63,
+  "type": "DIVIDER_WIDGET",
+  "version": 1,
+  "widgetId": "xgemgbit90",
+  "widgetName": "Divider2"
+}

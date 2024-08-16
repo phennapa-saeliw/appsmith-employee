@@ -1,0 +1,111 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 33,
+  "boxShadow": "none",
+  "buttonVariant": "TERTIARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtona5qesk46cp.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonndbodeae3g.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "#231f20",
+      "buttonType": "SIMPLE",
+      "iconName": "people",
+      "id": "groupButton1",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Employee",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Employee', {}, 'SAME_WINDOW')}}",
+      "placement": "START",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "#231f20",
+      "buttonType": "SIMPLE",
+      "iconName": "home",
+      "id": "groupButton2",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Home",
+      "menuItems": {},
+      "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW')}}",
+      "placement": "START",
+      "widgetId": ""
+    },
+    "groupButtona5qesk46cp": {
+      "buttonColor": "#231f20",
+      "buttonType": "SIMPLE",
+      "iconName": "user",
+      "id": "groupButtona5qesk46cp",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "User",
+      "menuItems": {},
+      "onClick": "{{navigateTo('User', {}, 'SAME_WINDOW')}}",
+      "placement": "START",
+      "widgetId": "wobbl785c2"
+    },
+    "groupButtonndbodeae3g": {
+      "buttonColor": "#231f20",
+      "buttonType": "SIMPLE",
+      "iconName": "log-out",
+      "id": "groupButtonndbodeae3g",
+      "index": 3,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Log out",
+      "menuItems": {},
+      "onClick": "{{log_out.Logout()}}",
+      "placement": "START",
+      "widgetId": "p46cngzflw"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.d6773218cfb61dcfa5f460d43371e30d.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "vu34k6suk6",
+  "leftColumn": 0,
+  "orientation": "vertical",
+  "originalBottomRow": 33,
+  "originalTopRow": 12,
+  "parentColumnSpace": 2.734375,
+  "parentId": "tyoan0omtd",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "topRow": 12,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "hlu7t2xibw",
+  "widgetName": "button_group_menu"
+}

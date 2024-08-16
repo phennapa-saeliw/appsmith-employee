@@ -1,0 +1,41 @@
+{
+  "animateLoading": true,
+  "borderRadius": "1.5rem",
+  "bottomRow": 72,
+  "boxShadow": "none",
+  "defaultImage": "",
+  "displayName": "Image",
+  "dynamicBindingPathList": [],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "enableDownload": false,
+  "enableRotation": false,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.52d8fb963abcb95c79b10f1553389f22.svg",
+  "image": "http://onymos.com/wp-content/uploads/2020/10/google-signin-button-1024x260.png",
+  "imageShape": "RECTANGLE",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ioa4u9ukml",
+  "leftColumn": 23,
+  "maxZoomLevel": 1,
+  "objectFit": "cover",
+  "onClick": "{{navigateTo('https://dscfsshcuqomvwcvryye.supabase.co/auth/v1/authorize',{\n\tprovider: 'google' ,\n\tredirect_to: 'https://app.appsmith.com/app/personnel/login-63857a2e3e748351b7e6cefd?embed=true'\n}, 'SAME_WINDOW')}}",
+  "originalBottomRow": 35,
+  "originalTopRow": 27,
+  "parentColumnSpace": 8.471954345703125,
+  "parentId": "j1vm9sq0th",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 44,
+  "topRow": 68,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "mrpqh3fwhr",
+  "widgetName": "image_sign_in_google"
+}

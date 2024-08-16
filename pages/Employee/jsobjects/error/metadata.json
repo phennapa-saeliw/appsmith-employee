@@ -1,15 +1,11 @@
 {
+  "gitSyncId": "63857a2e3e748351b7e6cefa_63ae9fb8fcb7cc4992ae2d4d",
+  "id": "Employee_error",
   "unpublishedCollection": {
     "name": "error",
     "pageId": "Employee",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
-    "variables": [],
-    "userPermissions": []
-  },
-  "id": "Employee_error",
-  "deleted": false,
-  "gitSyncId": "63857a2e3e748351b7e6cefa_63ae9fb8fcb7cc4992ae2d4d"
+    "variables": []
+  }
 }
