@@ -11,7 +11,7 @@
       "key": "accentColor"
     },
     {
-      "key": "options"
+      "key": "sourceData"
     },
     {
       "key": "isVisible"
@@ -21,6 +21,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -46,7 +49,8 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onOptionChange": "",
-  "options": "{{\nget_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) \n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 6.625,
   "parentId": "qraedk4bov",
   "parentRowSpace": 10,
@@ -57,6 +61,7 @@
     "dropdown"
   ],
   "serverSideFiltering": false,
+  "sourceData": "{{\nget_position.data.map(up => ({ 'label': up.name, 'value': up.id.toString()})) \n}}",
   "topRow": 24,
   "type": "SELECT_WIDGET",
   "version": 1,

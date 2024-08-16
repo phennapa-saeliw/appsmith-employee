@@ -6,6 +6,7 @@
   "borderWidth": "1",
   "bottomRow": 57,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  "canFreezeColumn": false,
   "childStylesheet": {
     "button": {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -34,6 +35,7 @@
     "name",
     "division_id"
   ],
+  "columnUpdatedAt": 1723779510440,
   "columnWidthMap": {
     "id": 68,
     "name": 230.5,
@@ -65,9 +67,14 @@
       "key": "primaryColumns.division_id.computedValue"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
+  "enableServerSideFiltering": false,
   "hideCard": false,
   "horizontalAlignment": "LEFT",
   "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
@@ -110,6 +117,7 @@
       "isVisible": false,
       "label": "division_id",
       "originalId": "division_id",
+      "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},
@@ -138,6 +146,7 @@
       "isVisible": true,
       "label": "ID",
       "originalId": "id",
+      "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},
@@ -166,6 +175,7 @@
       "isVisible": true,
       "label": "Position = 23 ⬇",
       "originalId": "name",
+      "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
       "validation": {},

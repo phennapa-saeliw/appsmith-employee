@@ -132,6 +132,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -146,6 +149,7 @@
     }
   ],
   "enableClientSideSearch": false,
+  "enableServerSideFiltering": false,
   "hideCard": false,
   "horizontalAlignment": "LEFT",
   "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",

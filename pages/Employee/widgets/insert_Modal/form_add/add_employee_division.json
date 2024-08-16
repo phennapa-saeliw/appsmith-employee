@@ -11,11 +11,15 @@
       "key": "accentColor"
     },
     {
-      "key": "options"
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
@@ -39,7 +43,8 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onOptionChange": "{{get_position.run()}}",
-  "options": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()}))\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 6.625,
   "parentId": "qraedk4bov",
   "parentRowSpace": 10,
@@ -50,6 +55,7 @@
     "dropdown"
   ],
   "serverSideFiltering": false,
+  "sourceData": "{{get_division.data.map(up => ({ 'label': up.division_name, 'value': up.division_id.toString()}))\n}}",
   "topRow": 15,
   "type": "SELECT_WIDGET",
   "version": 1,
